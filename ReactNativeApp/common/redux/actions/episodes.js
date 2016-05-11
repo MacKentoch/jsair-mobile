@@ -94,7 +94,12 @@ function shouldFetchAllEpisodesData(state) {
 }
 
 function filterPastEpisodes(allEpisode) {
-  return allEpisode.filter(episode => isPast(moment(episode.date).format('YYYY-MM-DD')));
+  return allEpisode.filter(
+    episode => {
+      return  isPast(moment(episode.date).format('YYYY-MM-DD')) &&
+              !isToday(moment(episode.date).format('YYYY-MM-DD'));
+    }
+  );
 }
 
 function filterFuturEpisodes(allEpisode) {
