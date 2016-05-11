@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Dan Abramov",
+    "twitter": "dan_abramov",
+    "link":     "https://twitter.com/dan_abramov",
+    "imgSrc" :  "https://javascriptair.com/resources/panelists/dan_abramov.png",
+    "startDate": "2015-12-09"
+  },
+
+  {
+    "name":     "Brian Lonsdorf",
+    "twitter":  "drboolean",
+    "link":     "https://twitter.com/drboolean",
+    "imgSrc" :  "https://javascriptair.com/resources/panelists/drboolean.png",
+    "startDate": "2015-12-09"
+  },
+
+  {
+    "name":     "Kyle Simpson",
+    "twitter":  "getify",
+    "link":     "https://twitter.com/getify",
+    "imgSrc" :  "https://javascriptair.com/resources/panelists/getify.png",
+    "startDate": "2015-12-09"
+  },
+
+  {
+    "name":     "Iheanyi Ekechukwu",
+    "twitter":  "kwuchu",
+    "link":     "https://twitter.com/kwuchu",
+    "imgSrc" :  "https://javascriptair.com/resources/panelists/kwuchu.png",
+    "startDate": "2015-12-09"
+  },
+
+  {
+    "name":     "Lin Clark",
+    "twitter":  "linclark",
+    "link":     "https://twitter.com/linclark",
+    "imgSrc" :  "https://javascriptair.com/resources/panelists/linclark.png",
+    "startDate": "2015-12-09"
+  },
+
+  {
+    "name":     "Matt Zabriskie",
+    "twitter":  "mzabriskie",
+    "link":     "https://twitter.com/mzabriskie",
+    "imgSrc" :  "https://javascriptair.com/resources/panelists/mzabriskie.png",
+    "startDate": "2015-12-09"
+  },
+
+  {
+    "name":     "Pam Selle",
+    "twitter":  "pamasaur",
+    "link":     "https://twitter.com/pamasaur",
+    "imgSrc" :  "https://javascriptair.com/resources/panelists/pamasaur.png",
+    "startDate": "2015-12-09"
+  },
+
+  {
+    "name":     "Tyler McGinnis",
+    "twitter":  "tylermcginnis33",
+    "link":     "https://twitter.com/tylermcginnis33",
+    "imgSrc" :  "https://javascriptair.com/resources/panelists/tylermcginnis33.png",
+    "startDate": "2015-12-09"
+  },
+]

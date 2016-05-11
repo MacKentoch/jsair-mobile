@@ -1,0 +1,523 @@
+[
+  {
+    "title": "Internet of Things with JavaScript",
+    "numberDisplay": "019",
+    "date": "2016-04-20",
+    "time": "12:00 PM (CT)",
+    "past": true,
+    "guests": [
+      {
+        "name": "Andy Carle",
+        "imgSrc": "https://javascriptair.com/episodes/2016-04-20/PrototypingAndy.png",
+        "twitter": "PrototypingAndy",
+        "picks": [
+          "[Chvrches](http://chvrch.es/)",
+          "BLE Hacking (Bluetooth Low Energy)",
+        ],
+      },
+      {
+        "name": "Kassandra Perch",
+        "imgSrc": "https://javascriptair.com/episodes/2016-04-20/nodebotanist.png",
+        "twitter": "nodebotanist",
+        "links": [
+          "[Learn JavaScript Robotics](http://www.amazon.com/Learning-JavaScript-Robotics-Kassandra-Perch/dp/1785883348)",
+          "[Tessel](https://tessel.io/)",
+          "[Espruino](http://espruino.com)",
+        ],
+        "picks": [
+          "[Kristina Durivage](https://twitter.com/gelicia)",
+          "[avrgirl](https://github.com/noopkat/avrgirl)",
+        ],
+      },
+      {
+        "name": "Kristina Durivage",
+        "imgSrc": "https://javascriptair.com/episodes/2016-04-20/gelicia.png",
+        "twitter": "gelicia",
+        "picks": [
+          "Suz Hintonâ€™s (cat filled!) presentation on how javascript runs on hardware  https://vimeo.com/129003513",
+          "Coming after 4/22 - A tutorial on making a simple IOT device with particle http://portfolio.gelicia.com/connecting-the-internet-with-the-thing-on-the-particle-platform/",
+        ],
+      },
+    ],
+    "description": "The world is becoming more and more interconnected with more devices joining and communicating on the network every day. The space of hardware hacking is exciting! It's becoming even more welcoming to developers as the barrier to entry has been decreased significantly with JavaScript.",
+    "hangoutId": "c46nrh7d108hnt81d4pdmbd00as",
+    "youTubeId": "oUBbfYUzaAI",
+    "podbeanId": "sgtax-5e9e3d",
+    "shortUrl": "http://jsair.io/iot",
+    "host": {
+      "tips": [
+        "Communicate with screencasts!",
+      ],
+      "picks": [
+        "[How to create a bite-sized screencast](https://www.youtube.com/playlist?list=PLV5CVI1eNcJhc9Lxu83Zp4uyqP2yKV4xl) by [yourâ€™s truly](https://twitter.com/kentcdodds)",
+        "[Conference Speaker? Hereâ€™s 7 Tips for Getting Accepted](https://medium.com/@housecor/conference-speaker-here-s-7-tips-for-getting-accepted-6151af513148) by [Cory House](https://twitter.com/housecor)",
+        "[JavaScript and Robots with Raquel VÃ©lez (rockbot)](https://changelog.com/200/)",
+      ],
+    },
+    "panelists": [
+      {
+        "twitter": "kwuchu",
+        "picks": [
+          "[Ember Fastboot](https://ember-fastboot.com)",
+          "[Ember-CLI-Deploy-DigitalOcean](https://github.com/iheanyi/ember-cli-deploy-digitalocean)",
+        ],
+      },
+    ],
+  },
+
+  {
+    "title": "JavaScript Frameworks: Ember",
+    "numberDisplay": "020",
+    "date": "2016-04-27",
+    "time": "12:00 PM (CT)",
+    "past": false,
+    "guests": [
+      {
+        "name": "Matthew Beale",
+        "imgSrc": "https://javascriptair.com/episodes/2016-04-27/mixonic.png",
+        "twitter": "mixonic",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "name": "Gavin Joyce",
+        "imgSrc": "https://javascriptair.com/episodes/2016-04-27/gavinjoyce.png",
+        "twitter": "gavinjoyce",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+    ],
+    "description": " Ember is one of the most widely used JavaScript frameworks in the world and has some pretty amazing features. Its focus is on giving you everything you need to build web applications and delivers on that promise for many applications in the world today!",
+    "hangoutId": "cuntpmhlo4u8o4vm7t04alundfo",
+    "youTubeId": "sU1Zo2evbkU",
+    "podbeanId": "",
+    "shortUrl": "http://jsair.io/ember",
+    "host": {
+      "links": [
+      ],
+      "tips": [
+      ],
+      "picks": [
+      ],
+    },
+    "panelists": [
+      {
+        "twitter": "dan_abramov",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "drboolean",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "getify",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "kwuchu",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "linclark",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "mzabriskie",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "pamasaur",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "tylermcginnis33",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+    ],
+  },
+
+  {
+    "title": "On site at ng-conf",
+    "date": "2016-05-04",
+    "past": false,
+    "numberDisplay": "021",
+    "time": "12:00 PM (CT)",
+    "guests": [
+      {
+        "name": "ng-conf",
+        "imgSrc": "https://javascriptair.com/episodes/2016-05-04/ngconf.png",
+        "twitter": "ngconf",
+        "squareImage": true,
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+    ],
+    "description": "We'll be on site at one of the biggest and most exciting conferences in the world: ng-conf.",
+    "hangoutId": "cbjlovqo30a8qlgnofngrcvoecg",
+    "youTubeId": "Q9aL9kmdmIE",
+    "podbeanId": "",
+    "shortUrl": "http://jsair.io/ng-conf",
+    "host": {
+      "links": [
+      ],
+      "tips": [
+      ],
+      "picks": [
+      ],
+    },
+    "panelists": [
+      {
+        "twitter": "dan_abramov",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "drboolean",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "getify",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "kwuchu",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "linclark",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "mzabriskie",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "pamasaur",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "tylermcginnis33",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+    ],
+  },
+
+  {
+    "title": "Inclusiveness",
+    "date": "2016-05-11",
+    "past": false,
+    "numberDisplay": "022",
+    "time": "12:00 PM (CT)",
+    "guests": [
+      {
+        "name": "TBA",
+        "imgSrc": "https://javascriptair.com/resources/images/guest-tba.png",
+        "link": "",
+        "links": [],
+        "tips": [],
+        "picks": [],
+      },
+    ],
+    "description": "The JavaScript community is composed of a ton of people with a ton of different backgrounds and privilege. We need to do our very best to make everyone feel as included as possible. It makes everything better when we work to foster a welcoming and friendly community. We're going to talk about what you can do to improve inclusiveness in your workspace and community.",
+    "hangoutId": "carao3pdrl3bag1kf8l9frerml4",
+    "youTubeId": "-rH-W483sUg",
+    "podbeanId": "",
+    "shortUrl": "http://jsair.io/inclusiveness",
+    "host": {
+      "links": [
+      ],
+      "tips": [
+      ],
+      "picks": [
+      ],
+    },
+    "panelists": [
+      {
+        "twitter": "dan_abramov",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "drboolean",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "getify",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "kwuchu",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "linclark",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "mzabriskie",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "pamasaur",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "tylermcginnis33",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+    ],
+  },
+
+  {
+    "title": "Transitioning from REST to GraphQL",
+    "date": "2016-05-18",
+    "past": false,
+    "numberDisplay": "023",
+    "time": "12:00 PM (CT)",
+    "guests": [
+      {
+        "name": "Lee Byron",
+        "imgSrc": "https://javascriptair.com/episodes/2016-05-18/leeb.png",
+        "twitter": "leeb",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "name": "Nick Schrock",
+        "imgSrc": "https://javascriptair.com/episodes/2016-05-18/schrockn.png",
+        "twitter": "schrockn",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+    ],
+    "description": "We've heard about [GraphQL](https://facebook.github.io/react/blog/2015/05/01/graphql-introduction.html) [quite](https://www.youtube.com/watch?v=cr4QB3j8qFc) [a](https://www.youtube.com/watch?v=gY48GW87Feo) [bit](https://www.youtube.com/watch?v=S0s935RKKB4). We know that there are problems with REST and GraphQL solves many of those problems. But now we have a new problem: Transitioning from REST to GraphQL. Let's talk about what it takes to do that well and how services need to adapt to this new way of thinking about data access.",
+    "hangoutId": "csvotlp55dohetinq6k4cmrnhcg",
+    "youTubeId": "ENqDNIp1Nd8",
+    "podbeanId": "",
+    "shortUrl": "http://jsair.io/rest-graphql",
+    "host": {
+      "links": [
+      ],
+      "tips": [
+      ],
+      "picks": [
+      ],
+    },
+    "panelists": [
+      {
+        "twitter": "dan_abramov",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "drboolean",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "getify",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "kwuchu",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "linclark",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "mzabriskie",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "pamasaur",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+      {
+        "twitter": "tylermcginnis33",
+        "links": [
+        ],
+        "tips": [
+        ],
+        "picks": [
+        ],
+      },
+    ],
+  }
+
+  
+
+
+]

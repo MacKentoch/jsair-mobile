@@ -1,0 +1,88 @@
+{
+  "premierSponsors": [
+    {
+      "imgSrc": "https://javascriptair.com/sponsors/eggheadio.png",
+      "name": "Egghead.io",
+      "link": "http://jsair.io/eggheadio",
+      "tagline": "Bite-sized web development video training",
+      "startDate": "2015-12-08",
+    },
+  ],
+  "goldSponsors": [
+    {
+      "imgSrc": "https://javascriptair.com/sponsors/frontendmasters.png",
+      "name": "Frontend Masters",
+      "link": "http://jsair.io/frontendmasters",
+      "tagline": "Expert front-end training",
+      "startDate": "2015-12-08",
+    },
+    {
+      "imgSrc": "https://javascriptair.com/sponsors/trackjs.png",
+      "name": "{Track:js}",
+      "link": "http://jsair.io/trackjs",
+      "tagline": "JavaScript Error Monitoring",
+      "startDate": "2015-12-08",
+    },
+    {
+      "imgSrc": "https://javascriptair.com/sponsors/wallabyjs.png",
+      "name": "Wallaby.js",
+      "link": "http://jsair.io/wallabyjs",
+      "tagline": "Realtime code coverage",
+      "startDate": "2016-01-15",
+      "endDate": "2016-04-18",
+    },
+    {
+      "imgSrc": "https://javascriptair.com/sponsors/codecov.png",
+      "name": "Codecov.io",
+      "link": "http://jsair.io/codecov",
+      "tagline": "Code coverage done right",
+      "startDate": "2016-01-15",
+      "endDate": "2016-04-19",
+    },
+    {
+      "imgSrc": "https://javascriptair.com/sponsors/sparkpost.png",
+      "name": "SparkPost",
+      "link": "http://jsair.io/sparkpost",
+      "tagline": "Email. We've Got It Down.",
+      "startDate": "2016-04-19",
+    },
+    {
+      "imgSrc": "https://javascriptair.com/sponsors/webstorm.png",
+      "name": "WebStorm",
+      "link": "http://jsair.io/webstorm",
+      "tagline": "Smart JavaScript IDE",
+      "startDate": "2016-04-20",
+    },
+  ],
+  "silverSponsors": [
+    {
+      "imgSrc": "https://javascriptair.com/sponsors/fluent.png",
+      "name": "Fluent",
+      "link": "http://jsair.io/fluent",
+      "tagline": "Web development training",
+      "startDate": "2016-02-02",
+    },
+    {
+      "imgSrc": "https://javascriptair.com/sponsors/auth0.png",
+      "name": "Auth0",
+      "link": "http://jsair.io/auth0",
+      "tagline": "Authentication Made Simple",
+      "startDate": "2016-02-17",
+    },
+    {
+      "imgSrc": "https://javascriptair.com/sponsors/trading-tech.png",
+      "name": "Trading Technologies",
+      "link": "http://jsair.io/trading-technologies",
+      "tagline": "Building For What's Next",
+      "startDate": "2016-03-22",
+    },
+    {
+      "imgSrc": "https://javascriptair.com/sponsors/sparkpost.png",
+      "name": "SparkPost",
+      "link": "http://jsair.io/sparkpost",
+      "tagline": "Email. We've Got It Down.",
+      "startDate": "2016-04-05",
+      "endDate": "2016-04-19",
+    },
+  ]
+}
