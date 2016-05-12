@@ -31,7 +31,26 @@
     "url": "git+https://github.com/MacKentoch/jsair-mobile.git"
   },
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "rm -rf ./node_modules/jest-cli/.haste_cache && jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "testFileExtensions": [
+      "es6",
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6"
+    ],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/fbjs"
+    ],
+    "verbose": true,
+    "collectCoverage": true
   },
   "dependencies": {
     "deindent": "0.1.0",
@@ -53,8 +72,11 @@
   },
   "devDependencies": {
     "babel-eslint": "6.0.4",
+    "babel-jest": "^12.0.2",
     "eslint": "2.9.0",
     "eslint-plugin-react": "5.0.1",
-    "eslint-plugin-react-native": "1.0.2"
+    "eslint-plugin-react-native": "1.0.2",
+    "jest-cli": "^12.0.2",
+    "react-addons-test-utils": "^15.0.2"
   }
 }
