@@ -8,7 +8,7 @@ Javascript air mobile application
 
 This is not a standard hybrid application but a more powerfull hybrid application where javascript is bridge to native: [React Native](https://facebook.github.io/react-native/).
 
-##### *Why an app when there is website?*
+##### *Why an app when there is already a website?*
 
 Javascript air website is a super nice website and is open source ([feel free to contribute](https://github.com/javascriptair/site)).
 But to my mind having a mobile app is as natural as having a website.
@@ -26,6 +26,9 @@ Just follow [official website instructions](https://facebook.github.io/react-nat
 - **android**: Drawer (android: React Native one is nice enough)
 - **both**: navigator
 - **both**: react-native-scrollable-tab-view
+- **both**: react-native-animatable
+- **both**: react-native-progress
+- **both**: react-native-vector-icons
 
 ### TODO
 
