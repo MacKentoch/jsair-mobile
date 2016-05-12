@@ -1,6 +1,8 @@
 Javascript air mobile application
 ====
 
+[![Join the chat at https://gitter.im/MacKentoch/jsair-mobile](https://badges.gitter.im/MacKentoch/jsair-mobile.svg)](https://gitter.im/MacKentoch/jsair-mobile?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [Javascript air](https://javascriptair.com/) on your mobile ([iOS](https://itunes.apple.com/fr/app/js-air/id1112141070?mt=8) and [Android](https://play.google.com/store/apps/details?id=com.jsair)) for `free` and `open source`.
 
 
