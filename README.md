@@ -6,7 +6,7 @@ Javascript air mobile application
 [Javascript air](https://javascriptair.com/) on your mobile ([iOS](https://itunes.apple.com/fr/app/js-air/id1112141070?mt=8) and [Android](https://play.google.com/store/apps/details?id=com.jsair)) for `free` and `open source`.
 
 
->You love javascript? Nice! This application is `build with javascript`.
+>You love javascript? Nice! This application is `built with javascript`.
 
 This is not a standard hybrid application but a more powerfull hybrid application where javascript is bridge to native: [React Native](https://facebook.github.io/react-native/).
 
@@ -25,7 +25,7 @@ Just follow [official website instructions](https://facebook.github.io/react-nat
 
 - **both**: `REDUX`
 - **iOS**: sidemenu (`react-native-side-menu`)
-- **android**: Drawer (android: React Native one is nice enough)
+- **android**: Drawer (React Native one is nice enough)
 - **both**: navigator
 - **both**: react-native-scrollable-tab-view
 - **both**: react-native-animatable
