@@ -6,7 +6,9 @@ jest.unmock('marked');
 
 import {
   removeMarkdownLinksAndKeepTextOnly,
-  markdownLinksExtractor
+  markdownLinksExtractor,
+  leftTrim,
+  isEmptyObject
 } from '../../../common/services/utils/utils';
 
 const stringWithMdLink = 'test with a [link](http://test@test.test)';
@@ -56,5 +58,34 @@ describe('services: markdownLinksExtractor', () => {
       });
     });
   });
+});
 
+describe('services: leftTrim', () => {
+  const stringToLeftTrim = 'a string to trim    ';
+  const stringTrimed = leftTrim(stringToLeftTrim);
+  describe('string length before trim', () => {
+    it('should contains 20 chars before leftTrim', () => {
+      expect(stringToLeftTrim.length).toEqual(20);
+    });
+  });
+  describe('string length after trim', () => {
+    it('should contains 16 chars after leftTrim', ()=>{
+      expect(stringTrimed.length).toEqual(20);
+    });
+  });
+});
+
+describe('services: isEmptyObject', () => {
+  it('should return true for empty Object' , () => {
+    expect(isEmptyObject({})).toBeTruthy();
+  });
+  it('should return false for non-empty Object' , () => {
+    expect(isEmptyObject({OneProp: 'yes'})).toBeFalsy();
+  });
+  it('should return false for a primitive' , () => {
+    expect(isEmptyObject('a primitive')).toBeFalsy();
+  });
+  it('should return false for an Array' , () => {
+    expect(isEmptyObject(['one', 'two'])).toBeFalsy();
+  });
 });
