@@ -1,6 +1,6 @@
 'use strict';
 
-// use "unmock" since ES6 import will be hoisted so "dontMock" won't work
+// use "unmock" since ES6 imports will be hoisted so "dontMock" won't work
 jest.unmock('../../../common/services/utils/utils');
 jest.unmock('marked');
 
@@ -8,7 +8,9 @@ import {
   removeMarkdownLinksAndKeepTextOnly,
   markdownLinksExtractor,
   leftTrim,
-  isEmptyObject
+  isEmptyObject,
+  cleanEpisodeDate,
+  stripHTML
 } from '../../../common/services/utils/utils';
 
 const stringWithMdLink = 'test with a [link](http://test@test.test)';
@@ -87,5 +89,25 @@ describe('services: isEmptyObject', () => {
   });
   it('should return false for an Array' , () => {
     expect(isEmptyObject(['one', 'two'])).toBeFalsy();
+  });
+});
+
+describe('services: cleanEpisodeDate', () => {
+  const badDate = '01:00 **PM** (CT)';
+  describe(`with an input equals '${badDate}'`, () => {
+    const expectedCleanedString = '01:00 PM (CT)';
+    it(`should return '${expectedCleanedString}'` , () => {
+      expect(cleanEpisodeDate(badDate)).toEqual(expectedCleanedString);
+    });
+  });
+});
+
+describe('services: stripHTML', () => {
+  const stringWithHtml = 'a string<a href="#">with html</a>';
+  describe(`with an input equals '${stringWithHtml}'`, () => {
+    const expectedCleanedString = 'a string with html ';
+    it(`should return '${expectedCleanedString}'` , () => {
+      expect(stripHTML(stringWithHtml)).toEqual(expectedCleanedString);
+    });
   });
 });

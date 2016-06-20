@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">54% </span>
+        <span class="strong">92% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>27/50</span>
+        <span class='fraction'>46/50</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">36.84% </span>
+        <span class="strong">73.68% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>7/19</span>
+        <span class='fraction'>14/19</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">75% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>6/8</span>
+        <span class='fraction'>8/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">47.73% </span>
+        <span class="strong">90.91% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>21/44</span>
+        <span class='fraction'>40/44</span>
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -155,43 +155,43 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-yes">17×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
 &nbsp;
@@ -229,44 +229,44 @@ export const isEmptyObject = (map) =&gt; {
    return true;
 };
 &nbsp;
-export const cleanEpisodeDate = (dateString) =<span class="fstat-no" title="function not covered" >&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  return dateString.replace(/[^a-zA-Z0-9():]+/g, ' '</span>);
+export const cleanEpisodeDate = (dateString) =&gt; {
+  return dateString.replace(/[^a-zA-Z0-9():]+/g, ' ');
 };
 &nbsp;
-export const stripHTML = (my_str<span class="fstat-no" title="function not covered" >ing) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    const charArr   = my_string.s</span>plit('');
-<span class="cstat-no" title="statement not covered" >    const resultAr</span>r = [];
-<span class="cstat-no" title="statement not covered" >    let htmlZone</span>    = 0;
-<span class="cstat-no" title="statement not covered" >    let quoteZone</span>   = 0;
+export const stripHTML = (my_string) =&gt; {
+    const charArr   = my_string.split('');
+    const resultArr = [];
+    let htmlZone    = 0;
+    let quoteZone   = 0;
     /* eslint quotes:0 */
-<span class="cstat-no" title="statement not covered" >    for (let x = 0; x &lt; charArr.length; x++ ) {</span>
-<span class="cstat-no" title="statement not covered" >     switch ( charArr[x] + htmlZone + quoteZone ) {</span>
+    for (let x = 0; x &lt; charArr.length; x++ ) {
+     switch ( charArr[x] + htmlZone + quoteZone ) {
        case "&lt;00" :
-<span class="cstat-no" title="statement not covered" >        html</span>Zone  = 1;
-<span class="cstat-no" title="statement not covered" ></span>        break;
+        htmlZone  = 1;
+        break;
        case "&gt;10" :
-<span class="cstat-no" title="statement not covered" >        html</span>Zone  = 0;
-<span class="cstat-no" title="statement not covered" >        resultArr.pus</span>h(' ');
-<span class="cstat-no" title="statement not covered" ></span>        break;
+        htmlZone  = 0;
+        resultArr.push(' ');
+        break;
        case '"10' :
-<span class="cstat-no" title="statement not covered" >        quote</span>Zone = 1;
-<span class="cstat-no" title="statement not covered" ></span>        break;
-       case "'10" :
+        quoteZone = 1;
+        break;
+<span class="branch-3 cbranch-no" title="branch not covered" >       case "'10" :</span>
 <span class="cstat-no" title="statement not covered" >        quote</span>Zone = 2;
 <span class="cstat-no" title="statement not covered" ></span>        break;
        case '"11' :
-<span class="cstat-no" title="statement not covered" >        quote</span>Zone = 0;
-<span class="cstat-no" title="statement not covered" ></span>        break;
-       case "'12" :
+        quoteZone = 0;
+        break;
+<span class="branch-5 cbranch-no" title="branch not covered" >       case "'12" :</span>
 <span class="cstat-no" title="statement not covered" >        quote</span>Zone = 0;
 <span class="cstat-no" title="statement not covered" ></span>        break;
        default    :
-<span class="cstat-no" title="statement not covered" >       if (!htmlZone) {</span>
-<span class="cstat-no" title="statement not covered" >         resultArr.push(char</span>Arr[x]);
+       if (!htmlZone) {
+         resultArr.push(charArr[x]);
        }
      }
     }
-<span class="cstat-no" title="statement not covered" >    return resultArr.join('</span>');
+    return resultArr.join('');
 };
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -274,7 +274,7 @@ export const stripHTML = (my_str<span class="fstat-no" title="function not cover
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Jun 18 2016 19:08:14 GMT+0200 (CEST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jun 19 2016 15:06:51 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../prettify.js"></script>
