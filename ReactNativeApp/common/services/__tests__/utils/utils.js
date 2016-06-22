@@ -1,7 +1,7 @@
 'use strict';
 
 // use "unmock" since ES6 imports will be hoisted so "dontMock" won't work
-jest.unmock('../../../common/services/utils/utils');
+jest.unmock('../../utils/utils');
 jest.unmock('marked');
 
 import {
@@ -11,7 +11,7 @@ import {
   isEmptyObject,
   cleanEpisodeDate,
   stripHTML
-} from '../../../common/services/utils/utils';
+} from '../../utils/utils';
 
 const stringWithMdLink = 'test with a [link](http://test@test.test)';
 
