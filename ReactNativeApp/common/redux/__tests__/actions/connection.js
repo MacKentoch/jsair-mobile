@@ -1,10 +1,19 @@
 'use strict';
 
+import configureStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+
+const middlewares = [thunk]; // add your middlewares like `redux-thunk`
+const mockStore = configureStore(middlewares);
+
 // use "unmock" since ES6 imports will be hoisted so "dontMock" won't work
 jest.unmock('../../actions/connection');
 jest.unmock('moment');
+jest.unmock('redux-thunk');
+jest.unmock('redux-mock-store');
 // jest.unmock('../../config');
 
+import moment from 'moment';
 import {
   IS_CONNECTED,
   NOT_CONNECTED,
@@ -27,9 +36,31 @@ describe('redux - actions: connection', () => {
     });
   });
 
-  // describe('action connectivityChange', () => {
-  //   it('should dispatch actions "setConnected"', () => {
-  //     expect(connectivityChange(true))
-  //   });
-  // });
+  describe('action connectivityChange', () => {
+    const setConnectedAction =  {
+      type: IS_CONNECTED,
+      actionDate: moment().format('llll')
+    };
+
+    const setNotConnectedAction =  {
+      type: NOT_CONNECTED,
+      actionDate: moment().format('llll')
+    };
+
+    it('should dispatch actions "setConnected"', () => {
+      const store = mockStore({});
+      store.dispatch(connectivityChange(true));
+      const actions = store.getActions();
+
+      expect(actions[0]).toEqual(setConnectedAction);
+    });
+
+    it('should dispatch actions "setNotConnected"', () => {
+      const store = mockStore({});
+      store.dispatch(connectivityChange(false));
+      const actions = store.getActions();
+
+      expect(actions[0]).toEqual(setNotConnectedAction);
+    });
+  });
 });

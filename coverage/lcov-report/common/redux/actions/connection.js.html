@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">55.17% </span>
+        <span class="strong">89.66% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>16/29</span>
+        <span class='fraction'>26/29</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">16.67% </span>
+        <span class="strong">61.11% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>3/18</span>
+        <span class='fraction'>11/18</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">12.5% </span>
+        <span class="strong">62.5% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/8</span>
+        <span class='fraction'>5/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">86.36% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>11/22</span>
+        <span class='fraction'>19/22</span>
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -102,27 +102,14 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -131,11 +118,24 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -149,15 +149,15 @@ import { NetInfo }      from 'react-native';<span class="branch-0 cbranch-no" ti
 export const IS_CONNECTED   = 'IS_CONNECTED';
 export const NOT_CONNECTED  = 'NOT_CONNECTED';
 &nbsp;
-const setConnecte<span class="fstat-no" title="function not covered" >d = (actionDate = moment<span class="cstat-no" title="statement not covered" ></span>().format('llll')) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  return {</span>
+const setConnected = (actionDate = moment().format('llll')) =&gt; {<span class="branch-1 cbranch-no" title="branch not covered" ><span class="branch-1 cbranch-no" title="branch not covered" ></span></span>
+  return {
     type:         IS_CONNECTED,
     actionDate
   };
 };
 &nbsp;
-const setNotConnecte<span class="fstat-no" title="function not covered" >d = (actionDate = moment().<span class="cstat-no" title="statement not covered" ></span>format('llll')) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  return {</span>
+const setNotConnected = (actionDate = moment().format('llll')) =&gt; {<span class="branch-1 cbranch-no" title="branch not covered" ><span class="branch-1 cbranch-no" title="branch not covered" ></span></span>
+  return {
     type:         NOT_CONNECTED,
     actionDate
   };
@@ -176,14 +176,14 @@ export const checkInitialConnectivity = () =&gt; {<span class="fstat-no" title="
   };
 };
 &nbsp;
-export const connectivityChange = (isConnected) =&gt;<span class="fstat-no" title="function not covered" > {</span>
-<span class="cstat-no" title="statement not covered" >  retur<span class="fstat-no" title="function not covered" >n dispatch =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >    if (isConnected) {</span>
-<span class="cstat-no" title="statement not covered" >      AppConfig.DEBUG_ENABLED ? console.log('redux connection connectivityChange - SET CONNECTED') : null</span>;
-<span class="cstat-no" title="statement not covered" >      dispatch(setConnecte</span>d());
+export const connectivityChange = (isConnected) =&gt; {
+  return dispatch =&gt; {
+    if (isConnected) {
+      AppConfig.DEBUG_ENABLED ? <span class="branch-0 cbranch-no" title="branch not covered" >console.log('redux connection connectivityChange - SET CONNECTED') </span>: null;
+      dispatch(setConnected());
     } else {
-<span class="cstat-no" title="statement not covered" >      AppConfig.DEBUG_ENABLED ? console.log('redux connection connectivityChange - SET NOT CONNECTED') : null</span>;
-<span class="cstat-no" title="statement not covered" >      dispatch(setNotConnecte</span>d());
+      AppConfig.DEBUG_ENABLED ? <span class="branch-0 cbranch-no" title="branch not covered" >console.log('redux connection connectivityChange - SET NOT CONNECTED') </span>: null;
+      dispatch(setNotConnected());
     }
   };
 };
@@ -193,7 +193,7 @@ export const connectivityChange = (isConnected) =&gt;<span class="fstat-no" titl
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Jun 21 2016 13:19:35 GMT+0200 (CEST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Jun 25 2016 21:20:48 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
