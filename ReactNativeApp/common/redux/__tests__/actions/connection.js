@@ -1,19 +1,21 @@
 'use strict';
 
+jest.disableAutomock(); // babel-jest version of "jest.autoMockOff()"
+
+import moment from 'moment';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 
 const middlewares = [thunk]; // add your middlewares like `redux-thunk`
 const mockStore = configureStore(middlewares);
 
+// NOTE: jest.disableAutomock() does the job:
 // use "unmock" since ES6 imports will be hoisted so "dontMock" won't work
-jest.unmock('../../actions/connection');
-jest.unmock('moment');
-jest.unmock('redux-thunk');
-jest.unmock('redux-mock-store');
-// jest.unmock('../../config');
+// jest.unmock('../../actions/connection');
+// jest.unmock('moment');
+// jest.unmock('redux-thunk');
+// jest.unmock('redux-mock-store');
 
-import moment from 'moment';
 import {
   IS_CONNECTED,
   NOT_CONNECTED,

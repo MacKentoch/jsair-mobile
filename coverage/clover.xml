@@ -1,31 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1466882448776" clover="3.2.0">
-	<project timestamp="1466882448776"  name="All Files" >
-		<metrics statements="105"  coveredstatements="94"  conditionals="88"  coveredconditionals="51"  methods="44"  coveredmethods="28"  elements="237"  coveredelements="173"  complexity="0"  packages="7"  files="7"  classes="7"  loc="238"  ncloc="238" />
+<coverage generated="1466970810390" clover="3.2.0">
+	<project timestamp="1466970810390"  name="All Files" >
+		<metrics statements="118"  coveredstatements="105"  conditionals="119"  coveredconditionals="69"  methods="56"  coveredmethods="38"  elements="293"  coveredelements="212"  complexity="0"  packages="8"  files="8"  classes="8"  loc="277"  ncloc="277" />
 		<package name="__mocks__" >
-			<metrics statements="20"  coveredstatements="20"  conditionals="35"  coveredconditionals="17"  methods="18"  coveredmethods="8" />
+			<metrics statements="22"  coveredstatements="22"  conditionals="35"  coveredconditionals="17"  methods="18"  coveredmethods="8" />
 			<file name="react-native.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/__mocks__/react-native.js" >
-				<metrics statements="20"  coveredstatements="20"  conditionals="35"  coveredconditionals="17"  methods="18"  coveredmethods="8" />
-				<line num="1"  count="3"  type="cond"  truecount="8"  falsecount="4" />
-				<line num="3"  count="2"  type="cond"  truecount="9"  falsecount="14" />
-				<line num="5"  count="1"  type="stmt" />
-				<line num="7"  count="1"  type="stmt" />
-				<line num="9"  count="1"  type="stmt" />
+				<metrics statements="22"  coveredstatements="22"  conditionals="35"  coveredconditionals="17"  methods="18"  coveredmethods="8" />
+				<line num="1"  count="6"  type="cond"  truecount="8"  falsecount="4" />
+				<line num="3"  count="4"  type="cond"  truecount="9"  falsecount="14" />
+				<line num="4"  count="2"  type="stmt" />
+				<line num="6"  count="2"  type="stmt" />
+				<line num="8"  count="2"  type="stmt" />
+				<line num="12"  count="2"  type="stmt" />
+				<line num="14"  count="2"  type="stmt" />
+				<line num="18"  count="2"  type="stmt" />
+				<line num="20"  count="2"  type="stmt" />
+				<line num="24"  count="2"  type="stmt" />
+				<line num="25"  count="2"  type="stmt" />
+				<line num="30"  count="2"  type="stmt" />
+				<line num="31"  count="2"  type="stmt" />
+				<line num="32"  count="2"  type="stmt" />
+				<line num="33"  count="2"  type="stmt" />
+				<line num="34"  count="2"  type="stmt" />
+				<line num="35"  count="2"  type="stmt" />
+				<line num="36"  count="2"  type="stmt" />
+				<line num="37"  count="2"  type="stmt" />
+				<line num="38"  count="2"  type="stmt" />
+				<line num="39"  count="2"  type="stmt" />
+				<line num="40"  count="2"  type="stmt" />
+			</file>
+		</package>
+		<package name="common.components.button" >
+			<metrics statements="11"  coveredstatements="9"  conditionals="31"  coveredconditionals="18"  methods="12"  coveredmethods="10" />
+			<file name="Button.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/common/components/button/Button.js" >
+				<metrics statements="11"  coveredstatements="9"  conditionals="31"  coveredconditionals="18"  methods="12"  coveredmethods="10" />
+				<line num="1"  count="2"  type="cond"  truecount="5"  falsecount="3" />
+				<line num="3"  count="1"  type="stmt" />
+				<line num="7"  count="1"  type="cond"  truecount="13"  falsecount="10" />
 				<line num="13"  count="1"  type="stmt" />
-				<line num="15"  count="1"  type="stmt" />
-				<line num="19"  count="1"  type="stmt" />
-				<line num="21"  count="1"  type="stmt" />
-				<line num="25"  count="1"  type="stmt" />
+				<line num="16"  count="0"  type="stmt" />
+				<line num="19"  count="2"  type="stmt" />
+				<line num="20"  count="2"  type="stmt" />
+				<line num="24"  count="0"  type="stmt" />
 				<line num="26"  count="1"  type="stmt" />
-				<line num="31"  count="1"  type="stmt" />
-				<line num="32"  count="1"  type="stmt" />
-				<line num="33"  count="1"  type="stmt" />
-				<line num="34"  count="1"  type="stmt" />
 				<line num="35"  count="1"  type="stmt" />
-				<line num="36"  count="1"  type="stmt" />
-				<line num="37"  count="1"  type="stmt" />
 				<line num="38"  count="1"  type="stmt" />
-				<line num="39"  count="1"  type="stmt" />
 			</file>
 		</package>
 		<package name="common.config" >

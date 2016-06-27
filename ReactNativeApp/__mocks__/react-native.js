@@ -1,7 +1,6 @@
 'use strict';
 
-import React, { Component } from 'react';
-
+import React from 'react';
 const ReactNative = {...React};
 
 ReactNative.StyleSheet = {
@@ -10,13 +9,13 @@ ReactNative.StyleSheet = {
   }
 };
 
-class View extends Component {
+class View extends React.Component {
   render() {
     return false;
   }
 }
 
-class ListView extends Component {
+class ListView extends React.Component {
   render() {
     return false;
   }
@@ -29,7 +28,7 @@ class AppRegistry {
 }
 
 ReactNative.View = View;
-ReactNative.View = ListView;
+ReactNative.ListView = ListView;
 ReactNative.Text = View;
 ReactNative.TouchableOpacity = View;
 ReactNative.TouchableHighlight = View;
@@ -37,5 +36,7 @@ ReactNative.TouchableWithoutFeedback = View;
 ReactNative.ToolbarAndroid = View;
 ReactNative.Image = View;
 ReactNative.AppRegistry = AppRegistry;
+ReactNative.NativeModules = {};
+ReactNative.Platform = {};
 
 export default ReactNative;
