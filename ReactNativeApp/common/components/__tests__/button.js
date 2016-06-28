@@ -1,11 +1,13 @@
 'use strict';
 
-jest.disableAutomock(); // babel-jest version of "jest.autoMockOff()"
-
 import React, {
   View
 }             from 'react-native';
-import utils  from 'react-addons-test-utils';
+
+jest.unmock('react-addons-test-utils');
+import utils  from 'react-addons-test-utils'; //
+
+jest.unmock('../button/Button');
 import Button from '../button/Button';
 
 
@@ -14,7 +16,7 @@ describe('Button', () => {
 
   function renderButton(props = {}, states = {}) {
     const renderer = utils.createRenderer();
-    renderer.render(<Button {...props} />);
+    renderer.render(<Button {...props} >{props.children}</Button>);
 
     const instance = renderer._instance._instance;
     instance.setState(states);
@@ -29,6 +31,7 @@ describe('Button', () => {
 
   const mockOnPress = jest.fn();
   const buttonProps = {
+    style: {nothing: ''},
     children: 'a child',
     onPress: () => mockOnPress()
   };
