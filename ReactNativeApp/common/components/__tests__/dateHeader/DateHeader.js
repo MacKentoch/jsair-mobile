@@ -4,12 +4,10 @@
 import React, {
   View
 }                     from 'react-native';
-
-jest.unmock('react-addons-test-utils');
 import utils          from 'react-addons-test-utils';
 
-jest.unmock('moment');
-jest.unmock('../../../../../common/config');
+// jest.unmock('moment');
+// jest.unmock('../../../../../common/config');
 // import { AppColors }  from '../../../../../common/config';
 
 jest.unmock('../../../episodeCard/dateHeader/DateHeader');

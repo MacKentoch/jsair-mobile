@@ -1,9 +1,17 @@
 'use strict';
 
-jest.disableAutomock(); // babel-jest version of "jest.autoMockOff()"
-import moment from 'moment';
-// import configureStore from 'redux-mock-store';
-// import thunk from 'redux-thunk';
+// jest.disableAutomock(); // babel-jest version of "jest.autoMockOff()"
+
+import configureStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+
+// jest.unmock('../../../services/fetchMock/fetchMock');
+// import { fetchAllEpisodeDataMock }  from '../../../services/fetchMock/fetchMock';
+// jest.unmock('../../../config/appConfig/AppConfig');
+// import { AppConfig } from '../../../config/appConfig/AppConfig';
+// jest.unmock('moment');
+// import moment from 'moment';
+
 import {
   REQUEST_EPISODES_DATA,
   RECEIVED_EPISODES_DATA,
@@ -13,8 +21,8 @@ import {
 } from '../../actions/episodes';
 
 
-// const middlewares = [thunk];
-// const mockStore = configureStore(middlewares);
+const middlewares = [thunk];
+const mockStore = configureStore(middlewares);
 
 
 describe('redux - actions: episodes', () => {
