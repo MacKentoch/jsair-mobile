@@ -9,11 +9,14 @@ ReactNative.StyleSheet = {
   }
 };
 
+export const StyleSheet = ReactNative.StyleSheet;
+
 class View extends React.Component {
   render() {
     return false;
   }
 }
+View.propTypes = {};
 
 class ListView extends React.Component {
   render() {
