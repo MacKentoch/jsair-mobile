@@ -8,7 +8,15 @@ ReactNative.StyleSheet = {
     return styles;
   }
 };
-
+/*
+* "export const StyleSheet = ReactNative.StyleSheet;"
+* IS FIX:  for "Cannot read property 'create' of undefined"
+*       when ES6 import of "StyleSheet":
+*         import {
+*           StyleSheet,
+*           ...
+*         }  from 'react-native';
+*/
 export const StyleSheet = ReactNative.StyleSheet;
 
 class View extends React.Component {
@@ -16,7 +24,7 @@ class View extends React.Component {
     return false;
   }
 }
-View.propTypes = {};
+// View.propTypes = {};
 
 class ListView extends React.Component {
   render() {

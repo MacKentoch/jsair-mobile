@@ -3,12 +3,10 @@
 import React, {
   View
 }             from 'react-native';
-
-jest.unmock('react-addons-test-utils');
 import utils  from 'react-addons-test-utils'; //
 
-jest.unmock('../button/Button');
-import Button from '../button/Button';
+jest.unmock('../../button/Button');
+import Button from '../../button/Button';
 
 
 describe('Button', () => {

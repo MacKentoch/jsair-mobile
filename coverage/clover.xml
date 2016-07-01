@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1467287412810" clover="3.2.0">
-	<project timestamp="1467287412810"  name="All Files" >
-		<metrics statements="132"  coveredstatements="119"  conditionals="123"  coveredconditionals="72"  methods="58"  coveredmethods="41"  elements="313"  coveredelements="232"  complexity="0"  packages="9"  files="9"  classes="9"  loc="323"  ncloc="323" />
+<coverage generated="1467288481484" clover="3.2.0">
+	<project timestamp="1467288481484"  name="All Files" >
+		<metrics statements="131"  coveredstatements="118"  conditionals="123"  coveredconditionals="72"  methods="58"  coveredmethods="41"  elements="312"  coveredelements="231"  complexity="0"  packages="9"  files="9"  classes="9"  loc="331"  ncloc="331" />
 		<package name="__mocks__" >
-			<metrics statements="24"  coveredstatements="24"  conditionals="35"  coveredconditionals="17"  methods="18"  coveredmethods="9" />
+			<metrics statements="23"  coveredstatements="23"  conditionals="35"  coveredconditionals="17"  methods="18"  coveredmethods="9" />
 			<file name="react-native.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/__mocks__/react-native.js" >
-				<metrics statements="24"  coveredstatements="24"  conditionals="35"  coveredconditionals="17"  methods="18"  coveredmethods="9" />
+				<metrics statements="23"  coveredstatements="23"  conditionals="35"  coveredconditionals="17"  methods="18"  coveredmethods="9" />
 				<line num="1"  count="9"  type="cond"  truecount="8"  falsecount="4" />
 				<line num="3"  count="6"  type="cond"  truecount="9"  falsecount="14" />
 				<line num="4"  count="3"  type="stmt" />
 				<line num="6"  count="3"  type="stmt" />
 				<line num="8"  count="1"  type="stmt" />
-				<line num="12"  count="3"  type="stmt" />
-				<line num="14"  count="3"  type="stmt" />
-				<line num="16"  count="3"  type="stmt" />
-				<line num="19"  count="3"  type="stmt" />
-				<line num="21"  count="3"  type="stmt" />
-				<line num="23"  count="3"  type="stmt" />
-				<line num="27"  count="3"  type="stmt" />
-				<line num="28"  count="3"  type="stmt" />
-				<line num="33"  count="3"  type="stmt" />
-				<line num="34"  count="3"  type="stmt" />
+				<line num="20"  count="3"  type="stmt" />
+				<line num="22"  count="3"  type="stmt" />
+				<line num="24"  count="3"  type="stmt" />
+				<line num="29"  count="3"  type="stmt" />
+				<line num="31"  count="3"  type="stmt" />
 				<line num="35"  count="3"  type="stmt" />
 				<line num="36"  count="3"  type="stmt" />
-				<line num="37"  count="3"  type="stmt" />
-				<line num="38"  count="3"  type="stmt" />
-				<line num="39"  count="3"  type="stmt" />
-				<line num="40"  count="3"  type="stmt" />
 				<line num="41"  count="3"  type="stmt" />
 				<line num="42"  count="3"  type="stmt" />
 				<line num="43"  count="3"  type="stmt" />
+				<line num="44"  count="3"  type="stmt" />
+				<line num="45"  count="3"  type="stmt" />
+				<line num="46"  count="3"  type="stmt" />
+				<line num="47"  count="3"  type="stmt" />
+				<line num="48"  count="3"  type="stmt" />
+				<line num="49"  count="3"  type="stmt" />
+				<line num="50"  count="3"  type="stmt" />
+				<line num="51"  count="3"  type="stmt" />
 			</file>
 		</package>
 		<package name="common.components.button" >

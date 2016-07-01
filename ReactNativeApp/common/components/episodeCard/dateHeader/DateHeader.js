@@ -12,7 +12,7 @@ import { AppColors }   from '../../../../common/config';
 import moment          from 'moment';
 
 const DateHeader = (props) => {
-  const episodeDate = moment(props.episodeDate).format('ddd, MMM Do YYYY');
+  const episodeDate = moment(new Date(props.episodeDate)).format('ddd, MMM Do YYYY');
   return (
     <View style={styles.container}>
       <Text style={styles.dateText}>
