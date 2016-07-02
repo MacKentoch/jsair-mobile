@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for common/components/episodeCard/dateHeader/DateHeader.js</title>
+    <title>Code coverage report for common/components/episodeCard/episodeButton/EpisodeButton.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../../prettify.css" />
     <link rel="stylesheet" href="../../../../base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../../index.html">all files</a> / <a href="index.html">common/components/episodeCard/dateHeader/</a> DateHeader.js
+      <a href="../../../../index.html">all files</a> / <a href="index.html">common/components/episodeCard/episodeButton/</a> EpisodeButton.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>16/16</span>
+        <span class='fraction'>13/13</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">75% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>12/12</span>
+        <span class='fraction'>10/10</span>
       </div>
     </div>
   </div>
@@ -90,7 +90,8 @@
 45
 46
 47
-48</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+48
+49</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -100,30 +101,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -144,46 +146,47 @@ import React, {
 }                      from 'react';
 import {
   StyleSheet,
-  View,
-  Text
+  Text,
+  Dimensions,
+  TouchableHighlight
 }                      from 'react-native';
-import { AppColors }   from '../../../../common/config';
-import moment          from 'moment';<span class="branch-0 cbranch-no" title="branch not covered" ></span>
+import { AppColors }   from '../../../../common/config';<span class="branch-0 cbranch-no" title="branch not covered" ></span>
 &nbsp;
-const DateHeader = (props) =&gt; {
-  const episodeDate = moment(new Date(props.episodeDate)).format('ddd, MMM Do YYYY');
+const window    = Dimensions.get('window');
+&nbsp;
+const EpisodeButton = (props) =&gt; {
   return (
-    &lt;View style={styles.container}&gt;
-      &lt;Text style={styles.dateText}&gt;
-        {episodeDate}
+    &lt;TouchableHighlight
+      underlayColor={AppColors.lightGrey}
+      style={styles.container}
+      onPress={props.onBtnPress}&gt;
+      &lt;Text&gt;
+        {props.buttonText}
       &lt;/Text&gt;
-    &lt;/View&gt;
+    &lt;/TouchableHighlight&gt;
   );
 };
 &nbsp;
-DateHeader.propTypes = {
-  episodeDate: PropTypes.string.isRequired,
-  dateFormat:  PropTypes.string
-};
-&nbsp;
-DateHeader.defaultProps = {
-  dateFormat: 'MMM Do YYYY'
+EpisodeButton.propTypes = {
+  buttonText: PropTypes.string.isRequired,
+  onBtnPress: PropTypes.func.isRequired
 };
 &nbsp;
 const styles = StyleSheet.create({
   container: {
-    flexDirection:  'row',
-    alignItems:     'center',
-    justifyContent: 'flex-start'
-  },
-  dateText: {
-    fontSize:   16,
-    fontWeight: '500',
-    color:      AppColors.mainYellow
+    width:            (window.width / 2) - 25,
+    height:           40,
+    borderColor:      AppColors.lightGrey,
+    borderWidth:      2,
+    backgroundColor:  AppColors.white,
+    //flex:           1,
+    //flexDirection:  'row',
+    alignItems:       'center',
+    justifyContent:   'center'
   }
 });
 &nbsp;
-export default DateHeader;
+export default EpisodeButton;
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

@@ -3,6 +3,17 @@
 import React from 'react';
 const ReactNative = {...React};
 
+export const Dimensions = {
+  get() {
+    return {
+      width: 320,
+      height: 570
+    };
+  }
+};
+
+ReactNative.Dimensions = { ...Dimensions };
+
 ReactNative.StyleSheet = {
   create: function create(styles) {
     return styles;
@@ -24,7 +35,6 @@ class View extends React.Component {
     return false;
   }
 }
-// View.propTypes = {};
 
 class ListView extends React.Component {
   render() {
@@ -49,5 +59,6 @@ ReactNative.Image = View;
 ReactNative.AppRegistry = AppRegistry;
 ReactNative.NativeModules = {};
 ReactNative.Platform = {};
+
 
 export default ReactNative;
