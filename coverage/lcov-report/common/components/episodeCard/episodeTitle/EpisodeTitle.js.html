@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for common/components/episodeCard/episodeButton/EpisodeButton.js</title>
+    <title>Code coverage report for common/components/episodeCard/episodeTitle/EpisodeTitle.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../../prettify.css" />
     <link rel="stylesheet" href="../../../../base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../../index.html">all files</a> / <a href="index.html">common/components/episodeCard/episodeButton/</a> EpisodeButton.js
+      <a href="../../../../index.html">all files</a> / <a href="index.html">common/components/episodeCard/episodeTitle/</a> EpisodeTitle.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>13/13</span>
+        <span class='fraction'>12/12</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">75% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>9/9</span>
       </div>
     </div>
   </div>
@@ -87,11 +87,7 @@
 42
 43
 44
-45
-46
-47
-48
-49</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+45</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -100,9 +96,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -116,6 +109,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -123,8 +117,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -146,47 +138,43 @@ import React, {
 }                      from 'react';
 import {
   StyleSheet,
-  Text,
-  Dimensions,
-  TouchableHighlight
+  View,
+  Text
 }                      from 'react-native';
 import { AppColors }   from '../../../../common/config';<span class="branch-0 cbranch-no" title="branch not covered" ></span>
 &nbsp;
-const window    = Dimensions.get('window');
-&nbsp;
-const EpisodeButton = (props) =&gt; {
+const EpisodeTitle = (props) =&gt; {
   return (
-    &lt;TouchableHighlight
-      underlayColor={AppColors.lightGrey}
-      style={styles.container}
-      onPress={props.onBtnPress}&gt;
-      &lt;Text&gt;
-        {props.buttonText}
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={styles.titleText}&gt;
+        {props.episodeTitle}
       &lt;/Text&gt;
-    &lt;/TouchableHighlight&gt;
+    &lt;/View&gt;
   );
 };
 &nbsp;
-EpisodeButton.propTypes = {
-  buttonText: PropTypes.string.isRequired,
-  onBtnPress: PropTypes.func.isRequired
+EpisodeTitle.propTypes = {
+  episodeTitle: PropTypes.string.isRequired
 };
 &nbsp;
 const styles = StyleSheet.create({
   container: {
-    width:            (window.width / 2) - 25,
-    height:           40,
-    borderColor:      AppColors.lightGrey,
-    borderWidth:      2,
-    backgroundColor:  AppColors.white,
-    //flex:           1,
-    //flexDirection:  'row',
-    alignItems:       'center',
-    justifyContent:   'center'
+    flex:           1,
+    paddingLeft:    2,
+    paddingRight:   2,
+    alignItems:     'center',
+    justifyContent: 'flex-start',
+    flexWrap:       'wrap'
+  },
+  titleText: {
+    fontSize:   24,
+    textAlign:   'center',
+    fontWeight: '500',
+    color:      AppColors.darkGrey
   }
 });
 &nbsp;
-export default EpisodeButton;
+export default EpisodeTitle;
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

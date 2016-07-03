@@ -11,7 +11,6 @@ export const Dimensions = {
     };
   }
 };
-
 ReactNative.Dimensions = { ...Dimensions };
 
 ReactNative.StyleSheet = {

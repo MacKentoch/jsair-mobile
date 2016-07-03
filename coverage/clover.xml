@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1467433818878" clover="3.2.0">
-	<project timestamp="1467433818878"  name="All Files" >
-		<metrics statements="144"  coveredstatements="131"  conditionals="127"  coveredconditionals="75"  methods="61"  coveredmethods="44"  elements="332"  coveredelements="250"  complexity="0"  packages="10"  files="10"  classes="10"  loc="385"  ncloc="385" />
+<coverage generated="1467485796979" clover="3.2.0">
+	<project timestamp="1467485796979"  name="All Files" >
+		<metrics statements="153"  coveredstatements="142"  conditionals="131"  coveredconditionals="78"  methods="63"  coveredmethods="48"  elements="347"  coveredelements="268"  complexity="0"  packages="11"  files="11"  classes="11"  loc="424"  ncloc="424" />
 		<package name="__mocks__" >
 			<metrics statements="26"  coveredstatements="26"  conditionals="35"  coveredconditionals="17"  methods="19"  coveredmethods="10" />
 			<file name="react-native.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/__mocks__/react-native.js" >
 				<metrics statements="26"  coveredstatements="26"  conditionals="35"  coveredconditionals="17"  methods="19"  coveredmethods="10" />
-				<line num="1"  count="12"  type="cond"  truecount="8"  falsecount="4" />
-				<line num="3"  count="8"  type="cond"  truecount="9"  falsecount="14" />
-				<line num="4"  count="4"  type="stmt" />
-				<line num="6"  count="4"  type="stmt" />
+				<line num="1"  count="15"  type="cond"  truecount="8"  falsecount="4" />
+				<line num="3"  count="10"  type="cond"  truecount="9"  falsecount="14" />
+				<line num="4"  count="5"  type="stmt" />
+				<line num="6"  count="5"  type="stmt" />
 				<line num="8"  count="1"  type="stmt" />
-				<line num="15"  count="4"  type="stmt" />
-				<line num="17"  count="4"  type="stmt" />
-				<line num="19"  count="2"  type="stmt" />
-				<line num="31"  count="4"  type="stmt" />
-				<line num="33"  count="4"  type="stmt" />
-				<line num="35"  count="4"  type="stmt" />
-				<line num="39"  count="4"  type="stmt" />
-				<line num="41"  count="4"  type="stmt" />
-				<line num="45"  count="4"  type="stmt" />
-				<line num="46"  count="4"  type="stmt" />
-				<line num="51"  count="4"  type="stmt" />
-				<line num="52"  count="4"  type="stmt" />
-				<line num="53"  count="4"  type="stmt" />
-				<line num="54"  count="4"  type="stmt" />
-				<line num="55"  count="4"  type="stmt" />
-				<line num="56"  count="4"  type="stmt" />
-				<line num="57"  count="4"  type="stmt" />
-				<line num="58"  count="4"  type="stmt" />
-				<line num="59"  count="4"  type="stmt" />
-				<line num="60"  count="4"  type="stmt" />
-				<line num="61"  count="4"  type="stmt" />
+				<line num="14"  count="5"  type="stmt" />
+				<line num="16"  count="5"  type="stmt" />
+				<line num="18"  count="3"  type="stmt" />
+				<line num="30"  count="5"  type="stmt" />
+				<line num="32"  count="5"  type="stmt" />
+				<line num="34"  count="5"  type="stmt" />
+				<line num="38"  count="5"  type="stmt" />
+				<line num="40"  count="5"  type="stmt" />
+				<line num="44"  count="5"  type="stmt" />
+				<line num="45"  count="5"  type="stmt" />
+				<line num="50"  count="5"  type="stmt" />
+				<line num="51"  count="5"  type="stmt" />
+				<line num="52"  count="5"  type="stmt" />
+				<line num="53"  count="5"  type="stmt" />
+				<line num="54"  count="5"  type="stmt" />
+				<line num="55"  count="5"  type="stmt" />
+				<line num="56"  count="5"  type="stmt" />
+				<line num="57"  count="5"  type="stmt" />
+				<line num="58"  count="5"  type="stmt" />
+				<line num="59"  count="5"  type="stmt" />
+				<line num="60"  count="5"  type="stmt" />
 			</file>
 		</package>
 		<package name="common.components.button" >
-			<metrics statements="11"  coveredstatements="9"  conditionals="31"  coveredconditionals="18"  methods="12"  coveredmethods="10" />
+			<metrics statements="11"  coveredstatements="11"  conditionals="31"  coveredconditionals="18"  methods="12"  coveredmethods="12" />
 			<file name="Button.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/common/components/button/Button.js" >
-				<metrics statements="11"  coveredstatements="9"  conditionals="31"  coveredconditionals="18"  methods="12"  coveredmethods="10" />
+				<metrics statements="11"  coveredstatements="11"  conditionals="31"  coveredconditionals="18"  methods="12"  coveredmethods="12" />
 				<line num="1"  count="2"  type="cond"  truecount="5"  falsecount="3" />
 				<line num="3"  count="1"  type="stmt" />
 				<line num="7"  count="1"  type="cond"  truecount="13"  falsecount="10" />
 				<line num="13"  count="1"  type="stmt" />
-				<line num="16"  count="0"  type="stmt" />
+				<line num="16"  count="1"  type="stmt" />
 				<line num="19"  count="2"  type="stmt" />
 				<line num="20"  count="2"  type="stmt" />
-				<line num="24"  count="0"  type="stmt" />
+				<line num="24"  count="1"  type="stmt" />
 				<line num="26"  count="1"  type="stmt" />
 				<line num="35"  count="1"  type="stmt" />
 				<line num="38"  count="1"  type="stmt" />
@@ -85,47 +85,62 @@
 				<line num="44"  count="1"  type="stmt" />
 			</file>
 		</package>
+		<package name="common.components.episodeCard.episodeTitle" >
+			<metrics statements="9"  coveredstatements="9"  conditionals="4"  coveredconditionals="3"  methods="2"  coveredmethods="2" />
+			<file name="EpisodeTitle.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/common/components/episodeCard/episodeTitle/EpisodeTitle.js" >
+				<metrics statements="9"  coveredstatements="9"  conditionals="4"  coveredconditionals="3"  methods="2"  coveredmethods="2" />
+				<line num="1"  count="1"  type="stmt" />
+				<line num="3"  count="1"  type="stmt" />
+				<line num="6"  count="1"  type="stmt" />
+				<line num="11"  count="1"  type="cond"  truecount="3"  falsecount="1" />
+				<line num="13"  count="1"  type="stmt" />
+				<line num="14"  count="1"  type="stmt" />
+				<line num="23"  count="1"  type="stmt" />
+				<line num="27"  count="1"  type="stmt" />
+				<line num="40"  count="1"  type="stmt" />
+			</file>
+		</package>
 		<package name="common.config" >
 			<metrics statements="6"  coveredstatements="6"  conditionals="4"  coveredconditionals="3"  methods="1"  coveredmethods="1" />
 			<file name="index.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/common/config/index.js" >
 				<metrics statements="6"  coveredstatements="6"  conditionals="4"  coveredconditionals="3"  methods="1"  coveredmethods="1" />
-				<line num="1"  count="3"  type="stmt" />
-				<line num="3"  count="3"  type="stmt" />
-				<line num="4"  count="3"  type="stmt" />
-				<line num="5"  count="3"  type="cond"  truecount="3"  falsecount="1" />
-				<line num="8"  count="3"  type="stmt" />
-				<line num="9"  count="3"  type="stmt" />
+				<line num="1"  count="4"  type="stmt" />
+				<line num="3"  count="4"  type="stmt" />
+				<line num="4"  count="4"  type="stmt" />
+				<line num="5"  count="4"  type="cond"  truecount="3"  falsecount="1" />
+				<line num="8"  count="4"  type="stmt" />
+				<line num="9"  count="4"  type="stmt" />
 			</file>
 		</package>
 		<package name="common.config.appColors" >
 			<metrics statements="1"  coveredstatements="1"  conditionals="0"  coveredconditionals="0"  methods="0"  coveredmethods="0" />
 			<file name="AppColors.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/common/config/appColors/AppColors.js" >
 				<metrics statements="1"  coveredstatements="1"  conditionals="0"  coveredconditionals="0"  methods="0"  coveredmethods="0" />
-				<line num="1"  count="3"  type="stmt" />
+				<line num="1"  count="4"  type="stmt" />
 			</file>
 		</package>
 		<package name="common.config.appConfig" >
 			<metrics statements="2"  coveredstatements="2"  conditionals="0"  coveredconditionals="0"  methods="0"  coveredmethods="0" />
 			<file name="AppConfig.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/common/config/appConfig/AppConfig.js" >
 				<metrics statements="2"  coveredstatements="2"  conditionals="0"  coveredconditionals="0"  methods="0"  coveredmethods="0" />
-				<line num="1"  count="3"  type="stmt" />
-				<line num="3"  count="3"  type="stmt" />
+				<line num="1"  count="4"  type="stmt" />
+				<line num="3"  count="4"  type="stmt" />
 			</file>
 		</package>
 		<package name="common.config.routes" >
 			<metrics statements="10"  coveredstatements="6"  conditionals="12"  coveredconditionals="6"  methods="9"  coveredmethods="6" />
 			<file name="app.routes.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/common/config/routes/app.routes.js" >
 				<metrics statements="10"  coveredstatements="6"  conditionals="12"  coveredconditionals="6"  methods="9"  coveredmethods="6" />
-				<line num="1"  count="6"  type="cond"  truecount="6"  falsecount="4" />
-				<line num="3"  count="3"  type="stmt" />
-				<line num="45"  count="3"  type="stmt" />
-				<line num="51"  count="3"  type="stmt" />
+				<line num="1"  count="8"  type="cond"  truecount="6"  falsecount="4" />
+				<line num="3"  count="4"  type="stmt" />
+				<line num="45"  count="4"  type="stmt" />
+				<line num="51"  count="4"  type="stmt" />
 				<line num="53"  count="0"  type="stmt" />
 				<line num="54"  count="0"  type="cond"  truecount="0"  falsecount="2" />
 				<line num="55"  count="0"  type="stmt" />
 				<line num="58"  count="0"  type="stmt" />
-				<line num="62"  count="3"  type="stmt" />
-				<line num="67"  count="3"  type="stmt" />
+				<line num="62"  count="4"  type="stmt" />
+				<line num="67"  count="4"  type="stmt" />
 			</file>
 		</package>
 		<package name="common.redux.actions" >

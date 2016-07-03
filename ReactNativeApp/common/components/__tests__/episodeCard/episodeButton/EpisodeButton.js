@@ -38,4 +38,9 @@ describe('EpisodeButton', () => {
   it('should have text "buttonText"', () => {
     expect(output.props.children.props.children).toEqual('buttonText');
   });
+  it('should call props.onPress()', () => {
+    // triggers onPress from chidlren = TouchableOpacity props:
+    output.props.onPress();
+    expect(mockOnPress.mock.calls.length).toBe(1);
+  });
 });

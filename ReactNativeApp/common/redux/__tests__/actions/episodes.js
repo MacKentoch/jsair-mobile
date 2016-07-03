@@ -16,9 +16,7 @@ import {
   // fetchAllEpisodesIfNeeded
 } from '../../actions/episodes';
 
-
 describe('redux - actions: episodes', () => {
-
   describe('actions constants REQUEST_EPISODES_DATA', () => {
     it('should equal "REQUEST_EPISODES_DATA"' , () => {
       expect(REQUEST_EPISODES_DATA).toEqual('REQUEST_EPISODES_DATA');

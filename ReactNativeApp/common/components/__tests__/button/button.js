@@ -31,7 +31,7 @@ describe('Button', () => {
   const buttonProps = {
     style: {nothing: ''},
     children: 'a child',
-    onPress: () => mockOnPress()
+    onPress: mockOnPress
   };
   button = renderButton(buttonProps);
 
@@ -50,11 +50,10 @@ describe('Button', () => {
     expect(output.props.children.props.children.props.children).toEqual('a child');
   });
 
-  // it('should call props.onPress()', () => {
-  //   const {output} = button;
-  //   const touchableOpacity = output.props.children;
-  //   utils.Simulate.click(touchableOpacity);
-  //   // expect(output.handlePress).toBeCalled();
-  //   expect(mockOnPress.mock.calls.length).toBe(1);
-  // });
+  it('should call props.onPress()', () => {
+    const {output} = button;
+    // triggers onPress from chidlren = TouchableOpacity props:
+    output.props.children.props.onPress();
+    expect(mockOnPress.mock.calls.length).toBe(1);
+  });
 });
