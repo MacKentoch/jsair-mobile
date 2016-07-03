@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for common/components/episodeCard/episodeTitle/EpisodeTitle.js</title>
+    <title>Code coverage report for common/components/episodeCard/timeHeader/TimeHeader.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../../prettify.css" />
     <link rel="stylesheet" href="../../../../base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../../index.html">all files</a> / <a href="index.html">common/components/episodeCard/episodeTitle/</a> EpisodeTitle.js
+      <a href="../../../../index.html">all files</a> / <a href="index.html">common/components/episodeCard/timeHeader/</a> TimeHeader.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>12/12</span>
+        <span class='fraction'>16/16</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">75% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>9/9</span>
+        <span class='fraction'>11/11</span>
       </div>
     </div>
   </div>
@@ -85,9 +85,7 @@
 40
 41
 42
-43
-44
-45</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+43</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -98,6 +96,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
@@ -114,10 +114,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -135,46 +131,44 @@
 &nbsp;
 import React, {
   PropTypes
-}                      from 'react';
-import {
+}                         from 'react';
+import  {
   StyleSheet,
   View,
   Text
 }                      from 'react-native';
-import { AppColors }   from '../../../../common/config';<span class="branch-0 cbranch-no" title="branch not covered" ></span>
+import { AppColors }   from '../../../../common/config';
+import Icon            from 'react-native-vector-icons/Ionicons';
+import moment          from 'moment';<span class="branch-0 cbranch-no" title="branch not covered" ></span>
 &nbsp;
-const EpisodeTitle = (props) =&gt; {
+const TimeHeader = (props) =&gt; {
   return (
     &lt;View style={styles.container}&gt;
-      &lt;Text style={styles.titleText}&gt;
-        {props.episodeTitle}
+      &lt;Text style={styles.timeText}&gt;
+        {props.episodeTime}
       &lt;/Text&gt;
     &lt;/View&gt;
   );
 };
 &nbsp;
-EpisodeTitle.propTypes = {
-  episodeTitle: PropTypes.string.isRequired
+TimeHeader.propTypes = {
+  episodeTime: PropTypes.string.isRequired
 };
 &nbsp;
 const styles = StyleSheet.create({
   container: {
-    flex:           1,
-    paddingLeft:    2,
-    paddingRight:   2,
+    flexDirection:  'row',
     alignItems:     'center',
-    justifyContent: 'flex-start',
-    flexWrap:       'wrap'
+    justifyContent: 'flex-end'
   },
-  titleText: {
-    fontSize:   24,
-    textAlign:   'center',
+  timeText: {
+    fontSize:   11,
     fontWeight: '500',
-    color:      AppColors.darkGrey
+    color:      AppColors.mainYellow
   }
 });
 &nbsp;
-export default EpisodeTitle;
+export default TimeHeader;
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

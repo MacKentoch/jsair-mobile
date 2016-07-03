@@ -1,5 +1,7 @@
 'use strict';
 
+jest.mock('../../../services', () => {});
+
 jest.disableAutomock(); // babel-jest version of "jest.autoMockOff()"
 
 import configureStore from 'redux-mock-store';

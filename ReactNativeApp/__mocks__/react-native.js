@@ -59,5 +59,36 @@ ReactNative.AppRegistry = AppRegistry;
 ReactNative.NativeModules = {};
 ReactNative.Platform = {};
 
+// FIX: "Warning: React.createElement: type should not be null, undefined, boolean, or number."
+// when import ES6 like :
+/*
+*  import {
+*   Image,
+*   View
+*  }  from 'react-native';
+*
+*/
+const Text = View;
+const TouchableOpacity = View;
+const TouchableHighlight = View;
+const TouchableWithoutFeedback = View;
+const ToolbarAndroid = View;
+const Image = View;
+const NativeModules = {};
+const Platform = {};
 
+export {
+  View,
+  ListView,
+  Text,
+  TouchableOpacity,
+  TouchableHighlight,
+  TouchableWithoutFeedback,
+  ToolbarAndroid,
+  Image,
+  AppRegistry,
+  NativeModules,
+  Platform
+};
+// default export:
 export default ReactNative;
