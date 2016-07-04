@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1467547142530" clover="3.2.0">
-	<project timestamp="1467547142530"  name="All Files" >
-		<metrics statements="240"  coveredstatements="191"  conditionals="191"  coveredconditionals="84"  methods="88"  coveredmethods="51"  elements="519"  coveredelements="326"  complexity="0"  packages="12"  files="13"  classes="13"  loc="613"  ncloc="613" />
+<coverage generated="1467548765962" clover="3.2.0">
+	<project timestamp="1467548765962"  name="All Files" >
+		<metrics statements="249"  coveredstatements="200"  conditionals="197"  coveredconditionals="88"  methods="90"  coveredmethods="53"  elements="536"  coveredelements="341"  complexity="0"  packages="13"  files="14"  classes="14"  loc="665"  ncloc="665" />
 		<package name="__mocks__" >
 			<metrics statements="45"  coveredstatements="45"  conditionals="35"  coveredconditionals="17"  methods="19"  coveredmethods="10" />
 			<file name="react-native.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/__mocks__/react-native.js" >
 				<metrics statements="45"  coveredstatements="45"  conditionals="35"  coveredconditionals="17"  methods="19"  coveredmethods="10" />
-				<line num="1"  count="18"  type="cond"  truecount="8"  falsecount="4" />
-				<line num="3"  count="12"  type="cond"  truecount="9"  falsecount="14" />
-				<line num="4"  count="6"  type="stmt" />
-				<line num="6"  count="6"  type="stmt" />
+				<line num="1"  count="21"  type="cond"  truecount="8"  falsecount="4" />
+				<line num="3"  count="14"  type="cond"  truecount="9"  falsecount="14" />
+				<line num="4"  count="7"  type="stmt" />
+				<line num="6"  count="7"  type="stmt" />
 				<line num="8"  count="1"  type="stmt" />
-				<line num="14"  count="6"  type="stmt" />
-				<line num="16"  count="6"  type="stmt" />
+				<line num="14"  count="7"  type="stmt" />
+				<line num="16"  count="7"  type="stmt" />
 				<line num="18"  count="4"  type="stmt" />
-				<line num="30"  count="6"  type="stmt" />
-				<line num="32"  count="6"  type="stmt" />
-				<line num="34"  count="6"  type="stmt" />
-				<line num="38"  count="6"  type="stmt" />
-				<line num="40"  count="6"  type="stmt" />
-				<line num="44"  count="6"  type="stmt" />
-				<line num="45"  count="6"  type="stmt" />
-				<line num="50"  count="6"  type="stmt" />
-				<line num="51"  count="6"  type="stmt" />
-				<line num="52"  count="6"  type="stmt" />
-				<line num="53"  count="6"  type="stmt" />
-				<line num="54"  count="6"  type="stmt" />
-				<line num="55"  count="6"  type="stmt" />
-				<line num="56"  count="6"  type="stmt" />
-				<line num="57"  count="6"  type="stmt" />
-				<line num="58"  count="6"  type="stmt" />
-				<line num="59"  count="6"  type="stmt" />
-				<line num="60"  count="6"  type="stmt" />
-				<line num="62"  count="6"  type="stmt" />
-				<line num="63"  count="6"  type="stmt" />
-				<line num="64"  count="6"  type="stmt" />
-				<line num="65"  count="6"  type="stmt" />
-				<line num="66"  count="6"  type="stmt" />
-				<line num="67"  count="6"  type="stmt" />
-				<line num="68"  count="6"  type="stmt" />
-				<line num="69"  count="6"  type="stmt" />
-				<line num="73"  count="6"  type="stmt" />
-				<line num="74"  count="6"  type="stmt" />
-				<line num="75"  count="6"  type="stmt" />
-				<line num="76"  count="6"  type="stmt" />
-				<line num="77"  count="6"  type="stmt" />
-				<line num="78"  count="6"  type="stmt" />
-				<line num="79"  count="6"  type="stmt" />
-				<line num="80"  count="6"  type="stmt" />
-				<line num="81"  count="6"  type="stmt" />
-				<line num="82"  count="6"  type="stmt" />
-				<line num="83"  count="6"  type="stmt" />
+				<line num="30"  count="7"  type="stmt" />
+				<line num="32"  count="7"  type="stmt" />
+				<line num="34"  count="7"  type="stmt" />
+				<line num="38"  count="7"  type="stmt" />
+				<line num="40"  count="7"  type="stmt" />
+				<line num="44"  count="7"  type="stmt" />
+				<line num="45"  count="7"  type="stmt" />
+				<line num="50"  count="7"  type="stmt" />
+				<line num="51"  count="7"  type="stmt" />
+				<line num="52"  count="7"  type="stmt" />
+				<line num="53"  count="7"  type="stmt" />
+				<line num="54"  count="7"  type="stmt" />
+				<line num="55"  count="7"  type="stmt" />
+				<line num="56"  count="7"  type="stmt" />
+				<line num="57"  count="7"  type="stmt" />
+				<line num="58"  count="7"  type="stmt" />
+				<line num="59"  count="7"  type="stmt" />
+				<line num="60"  count="7"  type="stmt" />
+				<line num="71"  count="7"  type="stmt" />
+				<line num="72"  count="7"  type="stmt" />
+				<line num="73"  count="7"  type="stmt" />
+				<line num="74"  count="7"  type="stmt" />
+				<line num="75"  count="7"  type="stmt" />
+				<line num="76"  count="7"  type="stmt" />
+				<line num="77"  count="7"  type="stmt" />
+				<line num="78"  count="7"  type="stmt" />
+				<line num="81"  count="7"  type="stmt" />
+				<line num="82"  count="7"  type="stmt" />
+				<line num="83"  count="7"  type="stmt" />
+				<line num="84"  count="7"  type="stmt" />
+				<line num="85"  count="7"  type="stmt" />
+				<line num="86"  count="7"  type="stmt" />
+				<line num="87"  count="7"  type="stmt" />
+				<line num="88"  count="7"  type="stmt" />
+				<line num="89"  count="7"  type="stmt" />
+				<line num="90"  count="7"  type="stmt" />
+				<line num="91"  count="7"  type="stmt" />
 			</file>
 		</package>
 		<package name="common.components.button" >
@@ -134,6 +134,21 @@
 				<line num="25"  count="1"  type="stmt" />
 				<line num="29"  count="1"  type="stmt" />
 				<line num="38"  count="1"  type="stmt" />
+			</file>
+		</package>
+		<package name="common.components.twitterLink" >
+			<metrics statements="9"  coveredstatements="9"  conditionals="6"  coveredconditionals="4"  methods="2"  coveredmethods="2" />
+			<file name="TwitterLink.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/common/components/twitterLink/TwitterLink.js" >
+				<metrics statements="9"  coveredstatements="9"  conditionals="6"  coveredconditionals="4"  methods="2"  coveredmethods="2" />
+				<line num="1"  count="1"  type="stmt" />
+				<line num="3"  count="1"  type="stmt" />
+				<line num="6"  count="1"  type="cond"  truecount="3"  falsecount="1" />
+				<line num="11"  count="1"  type="stmt" />
+				<line num="12"  count="1"  type="stmt" />
+				<line num="20"  count="1"  type="stmt" />
+				<line num="31"  count="1"  type="stmt" />
+				<line num="40"  count="1"  type="stmt" />
+				<line num="44"  count="1"  type="stmt" />
 			</file>
 		</package>
 		<package name="common.config" >
