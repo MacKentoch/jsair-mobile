@@ -23,16 +23,19 @@ describe('TwitterLink', () => {
         // instance
     };
   }
+  const mockTwitter         = 'testTwitter';
   const mockHeight          = 32;
   const mockFontSize        = 22;
   const mockOnTwitterPress  = jest.fn();
+  const mockMarginTop       = 20;
+  const mockMarginBottom    = 20;
   const twitterLinkProps    = {
     twitter:        'testTwitter',
     onTwitterPress: mockOnTwitterPress,
     height:         mockHeight,
     fontSize:       mockFontSize,
-    marginTop:      20,
-    marginBottom:   20
+    marginTop:      mockMarginTop,
+    marginBottom:   mockMarginBottom
   };
   twitterLink     = renderComponent(twitterLinkProps);
   const {output}  = twitterLink;
@@ -40,8 +43,8 @@ describe('TwitterLink', () => {
   it('should render TwitterLink component', () => {
     expect(output.type).toEqual(View);
   });
-  it('should display twitter link "@testTwitter"', () => {
-    expect(output.props.children.props.children).toEqual('@testTwitter');
+  it(`should display twitter link "@${mockTwitter}"`, () => {
+    expect(output.props.children.props.children).toEqual(`@${mockTwitter}`);
   });
   describe('Text style: ', () => {
     it(`should have "height" to ${mockHeight}`, () => {
@@ -50,5 +53,20 @@ describe('TwitterLink', () => {
     it(`should have "fontSize" to ${mockFontSize}`, () => {
       expect(output.props.children.props.style.fontSize).toBe(mockFontSize);
     });
+    it(`should have "marginTop" to ${mockMarginTop}`, () => {
+      expect(output.props.children.props.style.marginTop).toBe(mockMarginTop);
+    });
+    it(`should have "marginBottom" to ${mockMarginBottom}`, () => {
+      expect(output.props.children.props.style.marginBottom).toBe(mockMarginBottom);
+    });
   });
+  describe('on twitter link press', () => {
+    beforeEach(()=> {
+      output.props.onPress();
+    });
+    it('should link to twitter (call onTwitterPress)', () => {
+      expect(mockOnTwitterPress.mock.calls.length).toBe(1);
+    });
+  });
+
 });
