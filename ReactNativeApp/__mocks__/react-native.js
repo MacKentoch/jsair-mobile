@@ -58,6 +58,7 @@ ReactNative.Image = View;
 ReactNative.AppRegistry = AppRegistry;
 ReactNative.NativeModules = {};
 ReactNative.Platform = {};
+ReactNative.Linking = jest.fn();
 
 // FIX: "Warning: React.createElement: type should not be null, undefined, boolean, or number."
 // when import ES6 like :
@@ -76,6 +77,7 @@ const ToolbarAndroid = View;
 const Image = View;
 const NativeModules = {};
 const Platform = {};
+const Linking = jest.fn();
 
 export {
   View,
@@ -88,7 +90,8 @@ export {
   Image,
   AppRegistry,
   NativeModules,
-  Platform
+  Platform,
+  Linking
 };
 // default export:
 export default ReactNative;
