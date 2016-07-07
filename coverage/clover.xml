@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1467719225617" clover="3.2.0">
-	<project timestamp="1467719225617"  name="All Files" >
-		<metrics statements="262"  coveredstatements="212"  conditionals="201"  coveredconditionals="91"  methods="94"  coveredmethods="55"  elements="557"  coveredelements="358"  complexity="0"  packages="14"  files="15"  classes="15"  loc="766"  ncloc="766" />
+<coverage generated="1467836441567" clover="3.2.0">
+	<project timestamp="1467836441567"  name="All Files" >
+		<metrics statements="263"  coveredstatements="214"  conditionals="201"  coveredconditionals="91"  methods="92"  coveredmethods="55"  elements="556"  coveredelements="360"  complexity="0"  packages="14"  files="15"  classes="15"  loc="723"  ncloc="723" />
 		<package name="__mocks__" >
 			<metrics statements="48"  coveredstatements="48"  conditionals="35"  coveredconditionals="17"  methods="19"  coveredmethods="10" />
 			<file name="react-native.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/__mocks__/react-native.js" >
@@ -139,20 +139,21 @@
 				<line num="38"  count="1"  type="stmt" />
 			</file>
 		</package>
-		<package name="common.components.sponsorCard" >
-			<metrics statements="10"  coveredstatements="9"  conditionals="4"  coveredconditionals="3"  methods="4"  coveredmethods="2" />
-			<file name="SponsorCard.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/common/components/sponsorCard/SponsorCard.js" >
-				<metrics statements="10"  coveredstatements="9"  conditionals="4"  coveredconditionals="3"  methods="4"  coveredmethods="2" />
+		<package name="common.components.noData" >
+			<metrics statements="11"  coveredstatements="11"  conditionals="4"  coveredconditionals="3"  methods="2"  coveredmethods="2" />
+			<file name="noData.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/common/components/noData/noData.js" >
+				<metrics statements="11"  coveredstatements="11"  conditionals="4"  coveredconditionals="3"  methods="2"  coveredmethods="2" />
 				<line num="1"  count="1"  type="stmt" />
 				<line num="3"  count="1"  type="stmt" />
 				<line num="6"  count="1"  type="stmt" />
-				<line num="14"  count="1"  type="cond"  truecount="3"  falsecount="1" />
+				<line num="11"  count="1"  type="stmt" />
+				<line num="15"  count="2"  type="cond"  truecount="3"  falsecount="1" />
 				<line num="17"  count="1"  type="stmt" />
 				<line num="18"  count="1"  type="stmt" />
-				<line num="20"  count="0"  type="stmt" />
-				<line num="45"  count="1"  type="stmt" />
-				<line num="53"  count="1"  type="stmt" />
-				<line num="98"  count="1"  type="stmt" />
+				<line num="33"  count="1"  type="stmt" />
+				<line num="38"  count="1"  type="stmt" />
+				<line num="43"  count="1"  type="stmt" />
+				<line num="55"  count="1"  type="stmt" />
 			</file>
 		</package>
 		<package name="common.components.twitterLink" >
