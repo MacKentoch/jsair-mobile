@@ -5,7 +5,8 @@ import React, {
 }                     from 'react-native';
 import utils          from 'react-addons-test-utils';
 
-jest.mock('react-native-vector-icons/Ionicons',() => {});
+//TODO: need to fix Warning due to react-native-vector-icons
+jest.mock('react-native-vector-icons/Ionicons', ()=>{});
 
 jest.unmock('../../noData/noData');
 import NoData    from '../../noData/noData';
