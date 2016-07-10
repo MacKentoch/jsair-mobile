@@ -5,9 +5,8 @@ import React, {
 }                     from 'react-native';
 import utils          from 'react-addons-test-utils';
 
-jest.mock('react-native-animatable');
-
 jest.unmock('../../noConnectivity/NoConnectivity');
+jest.mock('react-native-animatable', ()=>{});
 import NoConnectivity    from '../../noConnectivity/NoConnectivity';
 
 describe('NoConnectivity', () => {
