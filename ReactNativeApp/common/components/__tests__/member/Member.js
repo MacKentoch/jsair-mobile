@@ -5,6 +5,23 @@ import React, {
 }                     from 'react-native';
 import utils          from 'react-addons-test-utils';
 
+jest.mock('../../../../common/config/appConfig/AppConfig',
+  () => {
+    return {
+      smallScreenMaxWidth: 320
+    };
+  }
+);
+jest.mock('../../../../common/config/appColors/AppColors',
+  () => {
+    return {
+      lightBlack: '#4A4A4A',
+      mainYellow: 'yellow'
+    };
+  }
+);
+jest.mock('../../twitterLink/TwitterLink', ()=>{});
+
 jest.unmock('../../member/Member');
 import Member         from '../../member/Member';
 
@@ -24,7 +41,16 @@ describe('Member', () => {
     };
   }
 
-  const memberProps = {};
+  const mockPhoto     = 'fake.img.png';
+  const mockname      = 'fake name';
+  const mockTwitter   = 'fakeTwitter';
+  const mockLink      = 'fakeLink';
+  const memberProps = {
+    photo:    mockPhoto,
+    name:     mockname,
+    twitter:  mockTwitter,
+    link:     mockLink
+  };
   member     = renderComponent(memberProps);
   const {output}  = member;
 
