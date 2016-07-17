@@ -31,7 +31,7 @@
   ],
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "rm -rf ./node_modules/jest-cli/.haste_cache && jest"
+    "test": "rm -rf ./node_modules/jest-cli/.haste_cache && jest --coverage"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
