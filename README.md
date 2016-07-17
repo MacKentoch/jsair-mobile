@@ -36,8 +36,9 @@ Just follow [official website instructions](https://facebook.github.io/react-nat
 
 ### TODO
 
-- [ ] add tests
-- [ ] add CI
+- [x] add tests
+  - [ ] 100% code covering
+- [x] add CI
 - [ ] upgrade and check RN 0.25+ compatibility (see *RN 0.25+ compatibility check (React from react not React Native)* below)
 - [ ] add contribution guidelines
 
