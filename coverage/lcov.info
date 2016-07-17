@@ -476,7 +476,7 @@ BRF:31
 BRH:18
 end_of_record
 TN:
-SF:/Users/kentor/GitProjects/jsair/ReactNativeApp/common/components/noData/noData.js
+SF:/Users/kentor/GitProjects/jsair/ReactNativeApp/common/components/noData/NoData.js
 FN:15,_interopRequireDefault
 FN:17,NoData
 FNF:2
