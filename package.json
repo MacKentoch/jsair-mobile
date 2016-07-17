@@ -1,9 +1,12 @@
 {
   "name": "jsair",
   "version": "1.0.1",
-  "private": true,
   "author": "Erwan DATIN (MacKentoch)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MacKentoch/jsair-mobile.git"
+  },
   "bugs": {
     "url": "https://github.com/MacKentoch/jsair-mobile/issues"
   },
@@ -26,10 +29,6 @@
     "ios",
     "android"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MacKentoch/jsair-mobile.git"
-  },
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "rm -rf ./node_modules/jest-cli/.haste_cache && jest"
