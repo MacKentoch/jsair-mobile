@@ -39,7 +39,7 @@ Just follow [official website instructions](https://facebook.github.io/react-nat
 - [x] add tests
   - [ ] 100% code covering
 - [x] add CI
-- [ ] upgrade and check RN 0.25+ compatibility (see *RN 0.25+ compatibility check (React from react not React Native)* below)
+- [x] upgrade and check RN 0.25+ compatibility (see *RN 0.25+ compatibility check (React from react not React Native)* below)
 - [ ] add contribution guidelines
 
 ### RN 0.25+ compatibility check (React from react not React Native)
@@ -61,11 +61,11 @@ import {
 
 - [x] "react-native-animatable": "^0.6.0",
 - [x] "react-native-dismiss-keyboard": "0.0.3",
-- [ ] "react-native-image-progress": "^0.4.0",
-- [ ] "react-native-progress": "^2.2.2",
+- [x] "react-native-image-progress": "^0.4.0",
+- [x] "react-native-progress": "^2.2.2",
 - [x] "react-native-scrollable-tab-view": "^0.4.1",
-- [ ] "react-native-side-menu": "^0.18.0",
-- [ ] "react-native-vector-icons": "^1.3.4",
+- [x] "react-native-side-menu": "^0.18.0",
+- [x] "react-native-vector-icons": "^1.3.4",
 
 ### license
 
