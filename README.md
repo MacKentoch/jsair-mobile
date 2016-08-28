@@ -34,38 +34,18 @@ Just follow [official website instructions](https://facebook.github.io/react-nat
 - **both**: react-native-progress
 - **both**: react-native-vector-icons
 
-### TODO
+### Current versions
+- iOS v1.0.2
+  - dependencies upgrade
+  - Episodes: add to calendar no more link to hangoutId but calendarId
+  - tabBar style
 
-- [x] add tests
-  - [ ] 100% code covering
-- [x] add CI
-- [x] upgrade and check RN 0.25+ compatibility (see *RN 0.25+ compatibility check (React from react not React Native)* below)
-- [ ] add contribution guidelines
 
-### RN 0.25+ compatibility check (React from react not React Native)
 
-**What is this breaking change:**
-React Native 0.25 introduced a breaking change:
-```Javascript
-// RN 0.25+, you no more do:
-import React, {
-  View
-} from 'react-native';
-
-// but:
-import React from 'react';
-import {
-  View
-} from 'react-native';
-```
-
-- [x] "react-native-animatable": "^0.6.0",
-- [x] "react-native-dismiss-keyboard": "0.0.3",
-- [x] "react-native-image-progress": "^0.4.0",
-- [x] "react-native-progress": "^2.2.2",
-- [x] "react-native-scrollable-tab-view": "^0.4.1",
-- [x] "react-native-side-menu": "^0.18.0",
-- [x] "react-native-vector-icons": "^1.3.4",
+- android v1.0.4
+  - dependencies upgrade
+  - Episodes: add to calendar no more link to hangoutId but calendarId
+  - tabBar style
 
 ### license
 

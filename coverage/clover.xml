@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1468754602975" clover="3.2.0">
-	<project timestamp="1468754602975"  name="All Files" >
-		<metrics statements="275"  coveredstatements="226"  conditionals="215"  coveredconditionals="98"  methods="95"  coveredmethods="58"  elements="585"  coveredelements="382"  complexity="0"  packages="15"  files="16"  classes="16"  loc="796"  ncloc="796" />
+<coverage generated="1472305881808" clover="3.2.0">
+	<project timestamp="1472305881808"  name="All Files" >
+		<metrics statements="271"  coveredstatements="222"  conditionals="215"  coveredconditionals="100"  methods="94"  coveredmethods="57"  elements="580"  coveredelements="379"  complexity="0"  packages="15"  files="16"  classes="16"  loc="796"  ncloc="796" />
 		<package name="__mocks__" >
 			<metrics statements="48"  coveredstatements="48"  conditionals="35"  coveredconditionals="17"  methods="19"  coveredmethods="10" />
 			<file name="react-native.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/__mocks__/react-native.js" >
@@ -57,18 +57,14 @@
 			</file>
 		</package>
 		<package name="common.components.button" >
-			<metrics statements="11"  coveredstatements="11"  conditionals="31"  coveredconditionals="18"  methods="12"  coveredmethods="12" />
+			<metrics statements="7"  coveredstatements="7"  conditionals="31"  coveredconditionals="20"  methods="11"  coveredmethods="11" />
 			<file name="Button.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/common/components/button/Button.js" >
-				<metrics statements="11"  coveredstatements="11"  conditionals="31"  coveredconditionals="18"  methods="12"  coveredmethods="12" />
-				<line num="1"  count="2"  type="cond"  truecount="5"  falsecount="3" />
+				<metrics statements="7"  coveredstatements="7"  conditionals="31"  coveredconditionals="20"  methods="11"  coveredmethods="11" />
+				<line num="1"  count="1"  type="cond"  truecount="5"  falsecount="3" />
 				<line num="3"  count="1"  type="stmt" />
-				<line num="7"  count="1"  type="cond"  truecount="13"  falsecount="10" />
-				<line num="13"  count="1"  type="stmt" />
-				<line num="16"  count="1"  type="stmt" />
-				<line num="19"  count="2"  type="stmt" />
-				<line num="20"  count="2"  type="stmt" />
-				<line num="24"  count="1"  type="stmt" />
-				<line num="26"  count="1"  type="stmt" />
+				<line num="7"  count="2"  type="cond"  truecount="15"  falsecount="8" />
+				<line num="13"  count="3"  type="stmt" />
+				<line num="29"  count="2"  type="stmt" />
 				<line num="35"  count="1"  type="stmt" />
 				<line num="38"  count="1"  type="stmt" />
 			</file>

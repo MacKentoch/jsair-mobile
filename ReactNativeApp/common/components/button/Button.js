@@ -11,17 +11,12 @@ import {
 }                   from 'react-native';
 
 class Button extends Component {
-
-  handlePress(event) {
-    this.props.onPress(event);
-  }
-
   render() {
     return (
       <View>
         <TouchableOpacity
           style={this.props.style}
-          onPress={(e)=>this.handlePress(e)} >
+          onPress={this.handlePress} >
           <Text>
             {this.props.children}
           </Text>
@@ -29,6 +24,11 @@ class Button extends Component {
       </View>
     );
   }
+
+  handlePress = (event) => {
+    this.props.onPress(event);
+  }
+
 }
 
 
