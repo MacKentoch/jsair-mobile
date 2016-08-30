@@ -7,12 +7,27 @@ import {
   combineReducers
 }                         from 'redux';
 import thunkMiddleware    from 'redux-thunk';
+import createLogger       from 'redux-logger';
 import * as reducers      from '../reducers';
+import { AppConfig }      from '../../config';
 
-// createStore : enhancer
-const enhancer = compose(
-  applyMiddleware(thunkMiddleware)
-);
+const loggerMiddleware = createLogger({
+  level     : 'info',
+  collapsed : true
+});
+
+let enhancer;
+if (AppConfig.REDUX_LOG_ACTIVE) {
+  // createStore : enhancer
+  enhancer = compose(
+    applyMiddleware(loggerMiddleware, thunkMiddleware)
+  );
+} else {
+  // createStore : enhancer
+  enhancer = compose(
+    applyMiddleware(thunkMiddleware)
+  );
+}
 
 // combine reducers
 const reducer = combineReducers({

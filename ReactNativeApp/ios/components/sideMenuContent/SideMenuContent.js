@@ -4,6 +4,7 @@ import React, {
   Component,
   PropTypes
 }                     from 'react';
+import shallowCompare from 'react-addons-shallow-compare';
 import {
   StyleSheet,
   View,
@@ -12,29 +13,52 @@ import {
   ScrollView,
   Image
 }                     from 'react-native';
-import { Button }     from '../../../common/components';
 import {
   AppRoutes,
   AppColors
 }                     from '../../../common/config';
 import Icon           from 'react-native-vector-icons/Ionicons';
+import NavButton      from './navButton/NavButton';
 
 const window    = Dimensions.get('window');
+const routes    = AppRoutes.getAllRoutes();
+
 
 class SideMenuContent extends Component {
   constructor(props) {
     super(props);
   }
 
-  handleNavButtonPress(event, route) {
+  shouldComponentUpdate(nextProps, nextState) {
+    return shallowCompare(this, nextProps, nextState);
+  }
 
-    this.props.navigate(route);
+  render() {
+    const { backGndColor, sideMenuTitle } = this.props;
+    return (
+      <ScrollView
+        style={[styles.container, {backgroundColor: backGndColor}]}
+        scrollsToTop={false}>
+        <Image
+          source={require('../../img/sidepanel.png')}
+          style={styles.backgroundImage}
+          resizeMode={'cover'}>
+          <View style={styles.headerContainer}>
+            <Text style={styles.headerText}>
+              {sideMenuTitle}
+            </Text>
+          </View>
+          <View style={styles.menusContainer}>
+            {this.renderSideMenuButtons()}
+          </View>
+        </Image>
+      </ScrollView>
+    );
   }
 
   renderSideMenuButtons() {
-    const routes          = AppRoutes.getAllRoutes();
     const SideMenuButtons = routes.map(
-      (route) => {
+      route => {
         return (
           <View
             style={styles.rowContent}
@@ -45,13 +69,11 @@ class SideMenuContent extends Component {
               size={28}
               color={AppColors.darkBlack}
             />
-            <Button
-              style={[styles.navButton]}
-              onPress={(e)=>this.handleNavButtonPress(e, {id : route.id})} >
-              <Text style={styles.navButtonText}>
-                {route.sidemenu.sideMenuButtonText}
-              </Text>
-            </Button>
+            <NavButton
+              routeId={route.id}
+              navText={route.sidemenu.sideMenuButtonText}
+              onNavButtonPress={this.handleNavButtonPress}
+            />
           </View>
         );
       }
@@ -59,26 +81,9 @@ class SideMenuContent extends Component {
     return SideMenuButtons;
   }
 
-  render() {
-    return (
-      <ScrollView
-        style={[styles.container,{backgroundColor: this.props.backGndColor}]}
-        scrollsToTop={false}>
-        <Image
-          source={require('../../img/sidepanel.png')}
-          style={styles.backgroundImage}
-          resizeMode={'cover'}>
-          <View style={styles.headerContainer}>
-            <Text style={styles.headerText}>
-              {this.props.sideMenuTitle}
-            </Text>
-          </View>
-          <View style={styles.menusContainer}>
-            {this.renderSideMenuButtons()}
-          </View>
-        </Image>
-      </ScrollView>
-    );
+  handleNavButtonPress = (route) => {
+    const { navigate } = this.props;
+    navigate(route);
   }
 }
 
@@ -136,23 +141,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems:    'center'
   },
-  navButton: {
-    flex:           1,
-    width:          window.width * 0.8,
-    flexDirection:  'row',
-    alignItems:     'center',
-    backgroundColor:  'transparent'
-  },
   icon: {
     marginRight: 15
   },
-  navButtonText: {
-    color:         AppColors.lightBlack,
-    fontSize:      22,
-    marginLeft:    30,
-    paddingLeft:   20,
-    paddingRight:  20
-  }
+
 });
 
 export default SideMenuContent;

@@ -24,10 +24,7 @@ import * as Animatable  from 'react-native-animatable';
 class EpisodesList extends Component {
   constructor(props) {
     super(props);
-    this.init();
-  }
 
-  init() {
     const ds = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2
     });
@@ -39,57 +36,53 @@ class EpisodesList extends Component {
   }
 
   componentDidMount() {
+    const { dataSource } = this.state;
+    const { episodes } = this.props;
+
     InteractionManager.runAfterInteractions(
       () => {
         this.setState({
           isReady: true,
-          dataSource: this.state.dataSource.cloneWithRows(this.props.episodes)
+          dataSource: dataSource.cloneWithRows(episodes)
         });
       }
     );
   }
 
   componentWillReceiveProps(nextProps) {
+    const { dataSource } = this.state;
+    const { episodes } = nextProps;
+
     this.setState({
-      dataSource: this.state.dataSource.cloneWithRows(nextProps.episodes)
+      dataSource: dataSource.cloneWithRows(episodes)
     });
   }
 
-  renderRow(rowData, sectionID, rowID) {
-    if (rowData) {
-      return (
-        <EpisodeCard
-          key={rowID}
-          style={{flexDirection: 'column', justifyContent: 'center'}}
-          episode={rowData}
-        />
-      );
-    }
-  }
-
   render() {
-    const props = this.props;
+    const { isReady } = this.state;
+    const { isConnected, hasDataInStore, contentLoading } = this.props;
+    const { episodesType } = this.props;
 
-    if ((!props.isConnected) && !props.hasDataInStore) {
+    if ((!isConnected) && !hasDataInStore) {
       return (
         <NoConnectivity />
       );
     }
 
-    if (props.contentLoading) {
+    if (contentLoading) {
       return  (
         <Loading />
       );
     }
 
-    if (!this.state.isReady) {
+    if (!isReady) {
       return (
         null
       );
     }
 
-    if (!props.hasDataInStore) {
-      switch (props.episodesType) {
+    if (!hasDataInStore) {
+      switch (episodesType) {
         case 'past':
           return (
             <NoData
@@ -124,11 +117,24 @@ class EpisodesList extends Component {
             initialListSize={AppConfig.episodes.initPageSize}
             enableEmptySections={true}
             dataSource={this.state.dataSource}
-            renderRow={(rowData, sectionID, rowID)=>this.renderRow(rowData, sectionID, rowID)}
+            renderRow={this.renderRow}
+            // removeClippedSubviews={false}
           />
         </View>
       </Animatable.View>
     );
+  }
+
+  renderRow = (rowData, sectionID, rowID) => {
+    if (rowData) {
+      return (
+        <EpisodeCard
+          key={rowID}
+          style={{flexDirection: 'column', justifyContent: 'center'}}
+          episode={rowData}
+        />
+      );
+    }
   }
 }
 

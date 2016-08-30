@@ -10,11 +10,11 @@ import {
 }                      from 'react-native';
 import { AppColors }   from '../../../../common/config';
 
-const EpisodeTitle = (props) => {
+const EpisodeTitle = ({episodeTitle}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.titleText}>
-        {props.episodeTitle}
+        {episodeTitle}
       </Text>
     </View>
   );

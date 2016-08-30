@@ -3,8 +3,9 @@
 export const AppConfig = {
 
   DEV_MODE:             false,  // to mock, not fetch request
-  DEBUG_ENABLED:        false,   // show or not console log to debug
+  DEBUG_ENABLED:        false,  // show or not console log to debug
   FAKE_ASYNC_DELAY:     1000,
+  REDUX_LOG_ACTIVE:     false,
 
   smallScreenMaxWidth:  320,
   sideMenuTitle: 'Javascript Air',
@@ -35,7 +36,7 @@ export const AppConfig = {
   },
 
   noData: {
-    defaultIonIconName:         'sad-outline',
+    defaultIonIconName:         'ios-sad-outline',
     defaultNoDataText:          'Sorry... Currently no data...',
     noPastEpisodeText:          'Sorry... Currently no past episode data...',
     noUpcomingEpisodeText:      'Sorry... Currently no upcoming episode data...',

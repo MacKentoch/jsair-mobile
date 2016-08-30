@@ -23,24 +23,68 @@ class Sponsors extends Component {
   }
 
   componentWillMount() {
-    this.props.enterSponsors();
+    const { enterSponsors } = this.props;
+    enterSponsors();
   }
 
   componentDidMount() {
-    this.props.fetchSponsorsDataIfNeeded();
+    const { fetchSponsorsDataIfNeeded } = this.props;
+    fetchSponsorsDataIfNeeded();
   }
 
   componentWillReceiveProps(nextProps) {
-    if (!this.props.isConnected && nextProps.isConnected) {
-      this.props.fetchSponsorsDataIfNeeded();
+    const { isConnected, fetchSponsorsDataIfNeeded } = this.props;
+    if (!isConnected && nextProps.isConnected) {
+      fetchSponsorsDataIfNeeded();
     }
   }
 
   componentWillUnmount() {
-    this.props.leaveSponsors();
+    const { leaveSponsors } = this.props;
+    leaveSponsors();
   }
 
-  renderTabBar() {
+  render() {
+    const { isConnected, isSponsorsFetching } = this.props;
+    const { premierSponsors, goldSponsors, silverSponsors } = this.props;
+
+    return (
+      <ScenesBackground>
+        <ScrollableTabView
+          style={styles.container}
+          renderTabBar={this.renderTabBar}
+          tabBarPosition="overlayTop"
+          initialPage={AppConfig.sponsors.initialPage}>
+          <Sponsor
+            tabLabel="Premier"
+            isConnected={isConnected}
+            hasDataInStore={premierSponsors.length > 0}
+            sponsorType={'premier'}
+            contentLoading={isSponsorsFetching}
+            sponsors={premierSponsors}
+          />
+          <Sponsor
+            tabLabel="Gold"
+            isConnected={isConnected}
+            hasDataInStore={goldSponsors.length > 0}
+            sponsorType={'gold'}
+            contentLoading={isSponsorsFetching}
+            sponsors={goldSponsors}
+          />
+          <Sponsor
+            tabLabel="Silver"
+            isConnected={isConnected}
+            hasDataInStore={silverSponsors.length > 0}
+            sponsorType={'silver'}
+            contentLoading={isSponsorsFetching}
+            sponsors={silverSponsors}
+          />
+        </ScrollableTabView>
+      </ScenesBackground>
+    );
+  }
+
+  renderTabBar = () => {
     return (
       <DefaultTabBar
         backgroundColor={AppColors.darkBlack}
@@ -48,44 +92,8 @@ class Sponsors extends Component {
         activeTextColor={AppColors.mainYellow}
         inactiveTextColor={AppColors.lightGrey}
         style={styles.tabBar}
+        textStyle={styles.tabBarTextStyle}
       />
-    );
-  }
-
-  render() {
-    return (
-      <ScenesBackground>
-        <ScrollableTabView
-          style={styles.container}
-          renderTabBar={()=>this.renderTabBar()}
-          tabBarPosition="overlayTop"
-          initialPage={AppConfig.sponsors.initialPage}>
-          <Sponsor
-            tabLabel="Premier"
-            isConnected={this.props.isConnected}
-            hasDataInStore={this.props.premierSponsors.length > 0}
-            sponsorType={'premier'}
-            contentLoading={this.props.isSponsorsFetching}
-            sponsors={this.props.premierSponsors}
-          />
-          <Sponsor
-            tabLabel="Gold"
-            isConnected={this.props.isConnected}
-            hasDataInStore={this.props.goldSponsors.length > 0}
-            sponsorType={'gold'}
-            contentLoading={this.props.isSponsorsFetching}
-            sponsors={this.props.goldSponsors}
-          />
-          <Sponsor
-            tabLabel="Silver"
-            isConnected={this.props.isConnected}
-            hasDataInStore={this.props.silverSponsors.length > 0}
-            sponsorType={'silver'}
-            contentLoading={this.props.isSponsorsFetching}
-            sponsors={this.props.silverSponsors}
-          />
-        </ScrollableTabView>
-      </ScenesBackground>
     );
   }
 }
@@ -112,6 +120,10 @@ const styles = StyleSheet.create({
   },
   tabBar: {
     elevation: 4
+  },
+  tabBarTextStyle: {
+    marginBottom:  -20,
+    paddingBottom:  0
   }
 });
 

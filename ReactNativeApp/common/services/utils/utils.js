@@ -73,3 +73,13 @@ export const stripHTML = (my_string) => {
     }
     return resultArr.join('');
 };
+
+
+export const cleanAuthFromCalendarUrl = (url = '') => {
+  const authIndex = url.indexOf('&auth');
+  if (authIndex >= 0) {
+    return url.slice(0, authIndex);
+  } else {
+    return url;
+  }
+};

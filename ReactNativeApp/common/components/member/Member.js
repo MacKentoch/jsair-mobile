@@ -1,8 +1,10 @@
 'use strict';
 
 import React, {
+  Component,
   PropTypes
 }                         from 'react';
+import shallowCompare     from 'react-addons-shallow-compare';
 import {
   StyleSheet,
   View,
@@ -17,35 +19,54 @@ import {
 }                         from '../../../common/config';
 import { TwitterLink }    from '../../components';
 
-const SCREEN_WIDTH  = Dimensions.get('window').width;
+const SCREEN_WIDTH = Dimensions.get('window').width;
 
-const Member = (props) => {
-  const styles = SCREEN_WIDTH <= AppConfig.smallScreenMaxWidth ?
-    smScreenStyles :
-    supSmScreenStyles;
+class Member extends Component  {
+  constructor(props) {
+    super(props);
+  }
 
-  return (
-    <View style={styles.container}>
-      <View style={styles.photoContainer}>
-        <Image
-          style={styles.memberPhoto}
-          resizeMode={'stretch'}
-          source={props.photo}
-          defaultSource={require('../../img/ui/defaultImage.png')}
-        />
+  shouldComponentUpdate(nextProps, nextState) {
+    return shallowCompare(this, nextProps, nextState);
+  }
+
+  render() {
+    const {photo, name, twitter} = this.props;
+
+    const styles = SCREEN_WIDTH <= AppConfig.smallScreenMaxWidth
+      ? smScreenStyles
+      : supSmScreenStyles;
+
+    return (
+      <View style={styles.container}>
+        <View style={styles.photoContainer}>
+          <Image
+            style={styles.memberPhoto}
+            resizeMode={'stretch'}
+            source={photo}
+            defaultSource={require('../../img/ui/defaultImage.png')}
+          />
+        </View>
+        <View style={styles.memberInfo}>
+          <Text style={styles.memberName}>
+            {name}
+          </Text>
+          <TwitterLink
+            twitter={twitter}
+            onTwitterPress={this.handlesTwitterPress}
+          />
+        </View>
       </View>
-      <View style={styles.memberInfo}>
-        <Text style={styles.memberName}>
-          {props.name}
-        </Text>
-        <TwitterLink
-          twitter={props.twitter}
-          onTwitterPress={() => Linking.openURL(`${props.link}`).catch(err => console.error('Member twitter link : an error occurred', err))}
-        />
-      </View>
-    </View>
-  );
-};
+    );
+  }
+
+  handlesTwitterPress = () => {
+    const { link } = this.props;
+    Linking
+      .openURL(`${link}`)
+      .catch(err => console.error('Member twitter link : an error occurred', err));
+  }
+}
 
 Member.propTypes = {
   photo:        PropTypes.any.isRequired,

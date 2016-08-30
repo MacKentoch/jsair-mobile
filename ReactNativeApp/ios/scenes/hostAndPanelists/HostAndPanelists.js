@@ -26,60 +26,73 @@ class HostAndPanelists extends Component {
   }
 
   componentWillMount() {
-    this.props.enterHostAndPanelists();
+    const { enterHostAndPanelists } = this.props;
+    enterHostAndPanelists();
   }
 
   componentDidMount() {
-    this.props.fetchHostDataIfNeeded();
-    this.props.fetchPanelistsDataIfNeeded();
+    const { fetchHostDataIfNeeded, fetchPanelistsDataIfNeeded } = this.props;
+    fetchHostDataIfNeeded();
+    fetchPanelistsDataIfNeeded();
   }
 
   componentWillReceiveProps(nextProps) {
-    if (!this.props.isConnected && nextProps.isConnected) {
-      this.props.fetchHostDataIfNeeded();
-      this.props.fetchPanelistsDataIfNeeded();
+    const { isConnected, fetchHostDataIfNeeded, fetchPanelistsDataIfNeeded } = this.props;
+    if (!isConnected && nextProps.isConnected) {
+      fetchHostDataIfNeeded();
+      fetchPanelistsDataIfNeeded();
     }
   }
 
   componentWillUnmount() {
-    this.props.leaveHostAndPanelists();
+    const { leaveHostAndPanelists } = this.props;
+    leaveHostAndPanelists();
   }
 
-  renderTabBar() {
+  render() {
+    const {
+      isConnected,
+      hostData,
+      panelistsData,
+      isHostFetching,
+      isPanelistsFetching
+    } = this.props;
+
+    return (
+      <ScenesBackground>
+        <ScrollableTabView
+            style={styles.container}
+            renderTabBar={this.renderTabBar}
+            tabBarPosition="overlayTop"
+            initialPage={AppConfig.hostAndPanelists.initialPage}>
+          <Host
+            tabLabel="Host"
+            isConnected={isConnected}
+            hasDataInStore={isEmptyObject(hostData) ? false : true}
+            contentLoading={isHostFetching}
+            host={hostData}
+          />
+          <Panelists
+            tabLabel="Panelists"
+            isConnected={isConnected}
+            hasDataInStore={(panelistsData && panelistsData.length > 0)}
+            contentLoading={isPanelistsFetching}
+            panelists={panelistsData}
+          />
+        </ScrollableTabView>
+      </ScenesBackground>
+    );
+  }
+
+  renderTabBar = () => {
     return (
       <DefaultTabBar
         backgroundColor={AppColors.darkBlack}
         underlineColor={AppColors.mainYellow}
         activeTextColor={AppColors.mainYellow}
         inactiveTextColor={AppColors.lightGrey}
+        textStyle={styles.tabBarTextStyle}
       />
-    );
-  }
-
-  render() {
-    return (
-      <ScenesBackground>
-        <ScrollableTabView
-            style={styles.container}
-            renderTabBar={()=>this.renderTabBar()}
-            tabBarPosition="overlayTop"
-            initialPage={AppConfig.hostAndPanelists.initialPage}>
-          <Host
-            tabLabel="Host"
-            isConnected={this.props.isConnected}
-            hasDataInStore={isEmptyObject(this.props.hostData) ? false : true}
-            contentLoading={this.props.isHostFetching}
-            host={this.props.hostData}
-          />
-          <Panelists
-            tabLabel="Panelists"
-            isConnected={this.props.isConnected}
-            hasDataInStore={(this.props.panelistsData && this.props.panelistsData.length > 0)}
-            contentLoading={this.props.isPanelistsFetching}
-            panelists={this.props.panelistsData}
-          />
-        </ScrollableTabView>
-      </ScenesBackground>
     );
   }
 }
@@ -99,6 +112,10 @@ const styles = StyleSheet.create({
   container: {
     flex:            1,
     marginTop:       54
+  },
+  tabBarTextStyle: {
+    marginBottom:  -20,
+    paddingBottom:  0,
   }
 });
 

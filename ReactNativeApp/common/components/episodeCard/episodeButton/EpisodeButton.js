@@ -11,16 +11,16 @@ import {
 }                      from 'react-native';
 import { AppColors }   from '../../../../common/config';
 
-const window    = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
-const EpisodeButton = (props) => {
+const EpisodeButton = ({ onBtnPress, buttonText }) => {
   return (
     <TouchableHighlight
       underlayColor={AppColors.lightGrey}
       style={styles.container}
-      onPress={props.onBtnPress}>
+      onPress={onBtnPress}>
       <Text>
-        {props.buttonText}
+        {buttonText}
       </Text>
     </TouchableHighlight>
   );
@@ -33,13 +33,11 @@ EpisodeButton.propTypes = {
 
 const styles = StyleSheet.create({
   container: {
-    width:            (window.width / 2) - 25,
+    width:            (width / 2) - 25,
     height:           40,
     borderColor:      AppColors.lightGrey,
     borderWidth:      2,
     backgroundColor:  AppColors.white,
-    //flex:           1,
-    //flexDirection:  'row',
     alignItems:       'center',
     justifyContent:   'center'
   }

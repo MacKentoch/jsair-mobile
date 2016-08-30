@@ -24,41 +24,42 @@ import * as Animatable  from 'react-native-animatable';
 class Host extends Component {
   constructor(props) {
     super(props);
-    this.init();
-  }
 
-  init() {
     this.state = {
       isReady: false
     };
   }
 
   componentDidMount() {
-    InteractionManager.runAfterInteractions(() => this.setState({isReady: true}));
+    InteractionManager.runAfterInteractions(
+      () => this.setState({isReady: true})
+    );
   }
 
   render() {
-    const props = this.props;
+    const { isConnected, hasDataInStore, contentLoading } = this.props;
+    const { host: { imgSrc, name, twitter, link } } = this.props;
+    const { isReady } = this.state;
 
-    if (!props.isConnected && !props.hasDataInStore) {
+    if (!isConnected && !hasDataInStore) {
       return (
         <NoConnectivity />
       );
     }
 
-    if (props.contentLoading) {
+    if (contentLoading) {
       return (
         <Loading />
       );
     }
 
-    if (!this.state.isReady) {
+    if (!isReady) {
       return (
         null
       );
     }
 
-    if (!props.hasDataInStore) {
+    if (!hasDataInStore) {
       return (
         <NoData
           noDataText={AppConfig.noHostDataText}
@@ -76,10 +77,10 @@ class Host extends Component {
           <View style={styles.hostList}>
             <Member
               style={styles.host}
-              photo={{uri: props.host.imgSrc ? AppConfig.javascriptAirUrl + props.host.imgSrc : ''}}
-              name={props.host.name}
-              twitter={props.host.twitter}
-              link={props.host.link}
+              photo={{uri: imgSrc ? AppConfig.javascriptAirUrl + imgSrc : ''}}
+              name={name}
+              twitter={twitter}
+              link={link}
             />
           </View>
         </ScrollView>

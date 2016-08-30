@@ -9,14 +9,12 @@ import  {
   Text
 }                      from 'react-native';
 import { AppColors }   from '../../../../common/config';
-import Icon            from 'react-native-vector-icons/Ionicons';
-import moment          from 'moment';
 
-const TimeHeader = (props) => {
+const TimeHeader = ({ episodeTime }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.timeText}>
-        {props.episodeTime}
+        {episodeTime}
       </Text>
     </View>
   );

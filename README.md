@@ -37,8 +37,15 @@ Just follow [official website instructions](https://facebook.github.io/react-nat
 ### Current versions
 - iOS v1.0.2
   - dependencies upgrade
-  - Episodes: add to calendar no more link to hangoutId but calendarId
   - tabBar style
+  - Episodes: add to calendar no more link to hangoutId but calendarId
+    - Note: if you encounter an error like `to many redirections` when tapping **add to calendar**:
+     - go to `Settings > safari`
+     - **clear safari data**
+     - **be sure cookies are enabled**
+
+     <img alt="" src="ios-safari-conf.gif" width="330" />
+
 
 
 

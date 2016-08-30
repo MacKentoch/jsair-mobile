@@ -31,49 +31,55 @@ import EpisodeTitle         from './episodeTitle/EpisodeTitle';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
-const EpisodeCard = (props) => {
+const EpisodeCard = ({
+  episode: {
+    numberDisplay,
+    title,
+    date,
+    time,
+    description,
+    calendarUrl,
+    youTubeId,
+    guests
+  }
+}) => {
   // INFO : if no youtubeId provided let user go to javascript air youtube channel
-  const youtubeUrl = props.episode.youTubeId ?
-    `https://www.youtube.com/watch?v=${props.episode.youTubeId}` :
-    'https://www.youtube.com/channel/UCJYTMGbtBliMSG8gadRHK2Q/videos';
-
-  // INFO : if no hangoutId provided let user go to google plus javascript air videos
-  const googlePlusUrl = props.episode ?
-    `https://plus.google.com/events/${props.episode.hangoutId}` :
-    'https://plus.google.com/+JavaScriptAir/videos';
-
-  const styles = SCREEN_WIDTH <= AppConfig.smallScreenMaxWidth ?
-    smScreensStyles :
-    supSmScreenStyles;
-  /* eslint quotes:0*/
-  const description = removeMarkdownLinksAndKeepTextOnly(stripHTML(props.episode.description.replace(/&#x27;/g, `'`)));
+  const youtubeUrl = youTubeId
+    ? `https://www.youtube.com/watch?v=${youTubeId}`
+    : 'https://www.youtube.com/channel/UCJYTMGbtBliMSG8gadRHK2Q/videos';
+  /* eslint-disable quotes */
+  const cleanedDescription = removeMarkdownLinksAndKeepTextOnly(stripHTML(description.replace(/&#x27;/g, `'`)));
+  /* eslint-enable quotes */
+  const styles = SCREEN_WIDTH <= AppConfig.smallScreenMaxWidth
+    ? smScreensStyles
+    : supSmScreenStyles;
 
   return (
     <View
       style={styles.container}>
       <View style={styles.headerSection}>
         <Text style={[styles.headerText, styles.headerEpisodeNum]}>
-          {props.episode.numberDisplay}:
+          {numberDisplay}:
         </Text>
         <View style={styles.dateAndTimeHeaderContainer}>
           <DateHeader
-            episodeDate={props.episode.date}
+            episodeDate={date}
             dateFormat={'MMM Do YYYY'}
           />
           <TimeHeader
-            episodeTime={cleanEpisodeDate(props.episode.time)}
+            episodeTime={cleanEpisodeDate(time)}
           />
         </View>
       </View>
       <View style={styles.body}>
         <View style={styles.episodeTitleContainer}>
           <EpisodeTitle
-            episodeTitle={stripHTML(props.episode.title)}
+            episodeTitle={stripHTML(title)}
           />
         </View>
         <View style={styles.descriptionContainer}>
           <Text style={styles.descriptionText}>
-            {description}
+            {cleanedDescription}
           </Text>
         </View>
         <View style={styles.buttonsContainer}>
@@ -82,10 +88,10 @@ const EpisodeCard = (props) => {
             onBtnPress={() => Linking.openURL(youtubeUrl).catch(err => console.error('View Episode : an error occurred', err))}
           />
           {
-            props.episode.hangoutId &&
+            calendarUrl &&
             <EpisodeButton
               buttonText={'add to calendar'}
-              onBtnPress={() => Linking.openURL(googlePlusUrl).catch(err => console.error('Add To Calendar : an error occurred', err))}
+              onBtnPress={() => Linking.openURL(calendarUrl).catch(err => console.error('Add To Calendar : an error occurred', err))}
             />
           }
         </View>
@@ -97,15 +103,15 @@ const EpisodeCard = (props) => {
           style={styles.scrollContainer}
           contentContainerStyle={styles.contentContainerStyle}>
           {
-            props.episode.guests.map(
-              (guest, guestIndex) => {
+            guests.map(
+              ({ imgSrc, name, twitter, links, picks }, guestIndex) => {
                 return (
                   <GuestBox
                     key={guestIndex}
                     guest={{
-                      photo: {uri: guest.imgSrc ? AppConfig.javascriptAirUrl + guest.imgSrc : ''},
-                      name: guest.name ? guest.name : 'TBA',
-                      twitter: guest.twitter ? guest.twitter : '',
+                      photo: {uri: imgSrc ? AppConfig.javascriptAirUrl + imgSrc : ''},
+                      name: name ? name : 'TBA',
+                      twitter: twitter ? twitter : '',
                     }}
                   />
                 );
@@ -125,7 +131,7 @@ EpisodeCard.propTypes = {
     date:             PropTypes.string.isRequired,
     time:             PropTypes.string.isRequired,
     description:      PropTypes.string.isRequired,
-    hangoutId:        PropTypes.string,
+    calendarUrl:      PropTypes.string,
     youTubeId:        PropTypes.string,
     guests:         PropTypes.arrayOf(
       PropTypes.shape({
@@ -153,10 +159,6 @@ const supSmScreenStyles = StyleSheet.create({
     paddingRight:     10,
     flex:             1,
     flexWrap:         'wrap',
-    // borderTopWidth:   0.5,
-    // borderLeftWidth:  0.5,
-    // borderRightWidth: 0.5,
-    // borderColor:      AppColors.darkGrey,
     flexDirection:    'row',
     alignItems:       'center',
     backgroundColor:  AppColors.lightBlack
@@ -247,10 +249,6 @@ const smScreensStyles = StyleSheet.create({
     paddingRight:     10,
     flex:             1,
     flexWrap:         'wrap',
-    // borderTopWidth:   0.5,
-    // borderLeftWidth:  0.5,
-    // borderRightWidth: 0.5,
-    // borderColor:      AppColors.darkGrey,
     flexDirection:    'row',
     alignItems:       'center',
     backgroundColor:  AppColors.lightBlack

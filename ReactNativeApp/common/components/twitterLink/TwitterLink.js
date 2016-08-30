@@ -8,20 +8,20 @@ import {
   TouchableOpacity
 }                      from 'react-native';
 
-const TwitterLink = (props) => {
+const TwitterLink = ({twitter, onTwitterPress, height, fontSize, marginTop, marginBottom}) => {
   const twitterStyle = {
-    height:           props.height,
-    marginTop:        props.marginTop,
-    marginBottom:     props.marginTop,
-    fontSize:         props.fontSize,
+    height:           height,
+    marginTop:        marginTop,
+    marginBottom:     marginTop,
+    fontSize:         fontSize,
     backgroundColor:  'transparent'
   };
 
   return (
     <TouchableOpacity
-      onPress={props.onTwitterPress}>
+      onPress={onTwitterPress}>
       <Text style={twitterStyle}>
-        {props.twitter ? `@${props.twitter}` : ''}
+        {twitter ? `@${twitter}` : ''}
       </Text>
     </TouchableOpacity>
   );

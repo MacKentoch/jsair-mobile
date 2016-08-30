@@ -24,11 +24,8 @@ import * as Animatable  from 'react-native-animatable';
 class Sponsor extends Component {
   constructor(props) {
     super(props);
-    this.init();
-  }
 
-  init() {
-    let ds = new ListView.DataSource({
+    const ds = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2
     });
 
@@ -39,75 +36,68 @@ class Sponsor extends Component {
   }
 
   componentDidMount() {
+    const { dataSource } = this.state;
+    const { sponsors } = this.props;
     InteractionManager.runAfterInteractions(
       () => {
         this.setState({
           isReady: true,
-          dataSource: this.state.dataSource.cloneWithRows(this.props.sponsors)
+          dataSource: dataSource.cloneWithRows(sponsors)
         });
       }
     );
   }
 
   componentWillReceiveProps(nextProps) {
+    const { dataSource } = this.state;
+    const { sponsors } = nextProps;
     this.setState({
-      dataSource: this.state.dataSource.cloneWithRows(nextProps.sponsors)
+      dataSource: dataSource.cloneWithRows(sponsors)
     });
   }
 
-  renderRow(rowData, sectionID, rowID) {
-    if (rowData) {
-      return (
-        <SponsorCard
-          image={{uri: rowData.imgSrc ? AppConfig.javascriptAirUrl + rowData.imgSrc : ''}}
-          name={rowData.name}
-          link={rowData.link}
-          tagline={rowData.tagline}
-          startDate={rowData.startDate}
-        />
-      );
-    }
-  }
-
   render() {
-    const props = this.props;
+    const { isConnected, hasDataInStore, contentLoading } = this.props;
+    const { sponsorType } = this.props;
+    const { isReady } = this.state;
+    const { noPremiumSponsorsDataText, noGoldSponsorsDataText, noSilverSponsorsDataText } = AppConfig;
 
-    if (!props.isConnected && !props.hasDataInStore) {
+    if (!isConnected && !hasDataInStore) {
       return (
         <NoConnectivity />
       );
     }
 
-    if (props.contentLoading) {
+    if (contentLoading) {
       return (
         <Loading />
       );
     }
 
-    if (!this.state.isReady) {
+    if (!isReady) {
       return (
         null
       );
     }
 
-    if (!props.hasDataInStore) {
-      switch (props.sponsorType) {
+    if (!hasDataInStore) {
+      switch (sponsorType) {
         case 'premier':
           return (
             <NoData
-              noDataText={AppConfig.noPremiumSponsorsDataText}
+              noDataText={noPremiumSponsorsDataText}
             />
           );
         case 'gold':
           return (
             <NoData
-              noDataText={AppConfig.noGoldSponsorsDataText}
+              noDataText={noGoldSponsorsDataText}
             />
           );
         case 'silver':
           return (
             <NoData
-              noDataText={AppConfig.noSilverSponsorsDataText}
+              noDataText={noSilverSponsorsDataText}
             />
           );
         default:
@@ -126,11 +116,26 @@ class Sponsor extends Component {
             enableEmptySections={true}
             contentContainerStyle={styles.list}
             dataSource={this.state.dataSource}
-            renderRow={(rowData, sectionID, rowID)=>this.renderRow(rowData, sectionID, rowID)}
+            renderRow={this.renderRow}
           />
         </View>
       </Animatable.View>
     );
+  }
+
+  renderRow = (rowData, sectionID, rowID) => {
+    if (rowData) {
+      const { imgSrc, name, link, tagline, startDate } = rowData;
+      return (
+        <SponsorCard
+          image={{uri: imgSrc ? AppConfig.javascriptAirUrl + imgSrc : ''}}
+          name={name}
+          link={link}
+          tagline={tagline}
+          startDate={startDate}
+        />
+      );
+    }
   }
 }
 

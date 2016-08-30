@@ -23,65 +23,75 @@ class Episodes extends Component {
   }
 
   componentWillMount() {
-    this.props.enterEpisodes();
+    const { enterEpisodes } = this.props;
+    enterEpisodes();
   }
 
   componentDidMount() {
-    this.props.fetchAllEpisodesIfNeeded();
+    const { fetchAllEpisodesIfNeeded } = this.props;
+    fetchAllEpisodesIfNeeded();
   }
 
   componentWillReceiveProps(nextProps) {
-    if (!this.props.isConnected && nextProps.isConnected) {
-      this.props.fetchAllEpisodesIfNeeded();
+    const { isConnected, fetchAllEpisodesIfNeeded } = this.props;
+    if (!isConnected && nextProps.isConnected) {
+      fetchAllEpisodesIfNeeded();
     }
   }
 
   componentWillUnmount() {
-    this.props.leaveEpisodes();
-  }
-
-  renderTabBar() {
-    return (
-      <DefaultTabBar
-        backgroundColor={AppColors.darkBlack}
-        underlineColor={AppColors.mainYellow}
-        activeTextColor={AppColors.mainYellow}
-        inactiveTextColor={AppColors.lightGrey}
-      />
-    );
+    const { leaveEpisodes } = this.props;
+    leaveEpisodes();
   }
 
   render() {
+    const { isConnected, isFetching } = this.props;
+    const { pastEpisodes, upcomingEpisodes, futurEpisodes } = this.props;
+    const { episodes: { initialPage } } = AppConfig;
+
     return (
       <ScenesBackground>
         <ScrollableTabView
           style={styles.container}
-          renderTabBar={()=>this.renderTabBar()}
+          renderTabBar={this.renderTabBar}
           tabBarPosition="overlayTop"
-          initialPage={AppConfig.episodes.initialPage}>
+          initialPage={initialPage}>
           <EpisodesList
             tabLabel="Past"
-            isConnected={this.props.isConnected}
-            hasDataInStore={(this.props.pastEpisodes && this.props.pastEpisodes.length > 0)}
-            contentLoading={this.props.isFetching}
-            episodes={this.props.pastEpisodes}
+            isConnected={isConnected}
+            hasDataInStore={(pastEpisodes && pastEpisodes.length > 0)}
+            contentLoading={isFetching}
+            episodes={pastEpisodes}
           />
           <EpisodesList
             tabLabel="Upcoming"
-            isConnected={this.props.isConnected}
-            hasDataInStore={(this.props.upcomingEpisodes && this.props.upcomingEpisodes.length > 0)}
-            contentLoading={this.props.isFetching}
-            episodes={this.props.upcomingEpisodes}
+            isConnected={isConnected}
+            hasDataInStore={(upcomingEpisodes && upcomingEpisodes.length > 0)}
+            contentLoading={isFetching}
+            episodes={upcomingEpisodes}
           />
           <EpisodesList
             tabLabel="Future"
-            isConnected={this.props.isConnected}
-            hasDataInStore={(this.props.futurEpisodes && this.props.futurEpisodes.length > 0)}
-            contentLoading={this.props.isFetching}
-            episodes={this.props.futurEpisodes}
+            isConnected={isConnected}
+            hasDataInStore={(futurEpisodes && futurEpisodes.length > 0)}
+            contentLoading={isFetching}
+            episodes={futurEpisodes}
           />
         </ScrollableTabView>
       </ScenesBackground>
+    );
+  }
+
+  renderTabBar = () => {
+    const { darkBlack, mainYellow, lightGrey } = AppColors;
+    return (
+      <DefaultTabBar
+        backgroundColor={darkBlack}
+        underlineColor={mainYellow}
+        activeTextColor={mainYellow}
+        inactiveTextColor={lightGrey}
+        textStyle={styles.tabBarTextStyle}
+      />
     );
   }
 }
@@ -110,6 +120,10 @@ const styles = StyleSheet.create({
   container: {
     flex:            1,
     marginTop:       54
+  },
+  tabBarTextStyle: {
+    marginBottom:  -20,
+    paddingBottom:  0,
   }
 });
 

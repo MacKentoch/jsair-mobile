@@ -17,7 +17,9 @@ const initialState = {
 
   pastEpisodes:           [],
   upcomingEpisodes:       [],
-  futurEpisodes:          []
+  futurEpisodes:          [],
+
+  error:                  null
 };
 
 const episodes = (state = initialState, action) => {
@@ -29,12 +31,14 @@ const episodes = (state = initialState, action) => {
         storedPastEpisode:      false,
         storedUpcomingEpisode:  false,
         storedFuturEpisode:     false,
-        actionDate:             action.actionDate
+        actionDate:             action.actionDate,
+        error:                  null
       };
     case ERROR_FETCHING_EPISODES_DATA:
       return {
         ...state,
-        isFetching:             false
+        isFetching:             false,
+        error:                  action.error
       };
     case RECEIVED_EPISODES_DATA:
       return {
@@ -47,7 +51,8 @@ const episodes = (state = initialState, action) => {
         upcomingEpisodes:       [...action.upcomingEpisodes],
         storedFuturEpisode:     true,
         futurEpisodes:          [...action.futurEpisodes],
-        actionDate:             action.actionDate
+        actionDate:             action.actionDate,
+        error:                  null
       };
     default:
       return state;

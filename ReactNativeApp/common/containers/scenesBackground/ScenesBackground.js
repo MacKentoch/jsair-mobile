@@ -11,16 +11,16 @@ import {
 }                     from 'react-native';
 import { AppColors }  from '../../config/appColors/AppColors';
 
-const ScenesBackground = (props) => {
-  const WINDOW = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
+const ScenesBackground = ({children}) => {
   return (
     <View style={styles.backgroundView}>
       <Image
         source={require('../../img/membersBackground.png')}
         resizeMode={'cover'}
-        style={{width: WINDOW.width, height: WINDOW.height}}>
-        {props.children}
+        style={{width: width, height: height}}>
+        {children}
       </Image>
     </View>
   );

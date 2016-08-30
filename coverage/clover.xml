@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1472305881808" clover="3.2.0">
-	<project timestamp="1472305881808"  name="All Files" >
-		<metrics statements="271"  coveredstatements="222"  conditionals="215"  coveredconditionals="100"  methods="94"  coveredmethods="57"  elements="580"  coveredelements="379"  complexity="0"  packages="15"  files="16"  classes="16"  loc="796"  ncloc="796" />
+<coverage generated="1472502389947" clover="3.2.0">
+	<project timestamp="1472502389947"  name="All Files" >
+		<metrics statements="278"  coveredstatements="225"  conditionals="221"  coveredconditionals="98"  methods="96"  coveredmethods="58"  elements="595"  coveredelements="381"  complexity="0"  packages="15"  files="16"  classes="16"  loc="811"  ncloc="811" />
 		<package name="__mocks__" >
 			<metrics statements="48"  coveredstatements="48"  conditionals="35"  coveredconditionals="17"  methods="19"  coveredmethods="10" />
 			<file name="react-native.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/__mocks__/react-native.js" >
@@ -57,16 +57,20 @@
 			</file>
 		</package>
 		<package name="common.components.button" >
-			<metrics statements="7"  coveredstatements="7"  conditionals="31"  coveredconditionals="20"  methods="11"  coveredmethods="11" />
+			<metrics statements="11"  coveredstatements="11"  conditionals="31"  coveredconditionals="18"  methods="12"  coveredmethods="12" />
 			<file name="Button.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/common/components/button/Button.js" >
-				<metrics statements="7"  coveredstatements="7"  conditionals="31"  coveredconditionals="20"  methods="11"  coveredmethods="11" />
-				<line num="1"  count="1"  type="cond"  truecount="5"  falsecount="3" />
+				<metrics statements="11"  coveredstatements="11"  conditionals="31"  coveredconditionals="18"  methods="12"  coveredmethods="12" />
+				<line num="1"  count="2"  type="cond"  truecount="5"  falsecount="3" />
 				<line num="3"  count="1"  type="stmt" />
-				<line num="7"  count="2"  type="cond"  truecount="15"  falsecount="8" />
-				<line num="13"  count="3"  type="stmt" />
-				<line num="29"  count="2"  type="stmt" />
-				<line num="35"  count="1"  type="stmt" />
-				<line num="38"  count="1"  type="stmt" />
+				<line num="7"  count="1"  type="stmt" />
+				<line num="8"  count="2"  type="cond"  truecount="13"  falsecount="10" />
+				<line num="14"  count="1"  type="stmt" />
+				<line num="15"  count="1"  type="stmt" />
+				<line num="16"  count="1"  type="stmt" />
+				<line num="37"  count="1"  type="stmt" />
+				<line num="39"  count="2"  type="stmt" />
+				<line num="44"  count="1"  type="stmt" />
+				<line num="47"  count="1"  type="stmt" />
 			</file>
 		</package>
 		<package name="common.components.episodeCard.dateHeader" >
@@ -100,7 +104,7 @@
 				<line num="17"  count="1"  type="stmt" />
 				<line num="29"  count="1"  type="stmt" />
 				<line num="34"  count="1"  type="stmt" />
-				<line num="44"  count="1"  type="stmt" />
+				<line num="42"  count="1"  type="stmt" />
 			</file>
 		</package>
 		<package name="common.components.episodeCard.episodeTitle" >
@@ -119,20 +123,18 @@
 			</file>
 		</package>
 		<package name="common.components.episodeCard.timeHeader" >
-			<metrics statements="11"  coveredstatements="11"  conditionals="4"  coveredconditionals="3"  methods="2"  coveredmethods="2" />
+			<metrics statements="9"  coveredstatements="9"  conditionals="4"  coveredconditionals="3"  methods="2"  coveredmethods="2" />
 			<file name="TimeHeader.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/common/components/episodeCard/timeHeader/TimeHeader.js" >
-				<metrics statements="11"  coveredstatements="11"  conditionals="4"  coveredconditionals="3"  methods="2"  coveredmethods="2" />
+				<metrics statements="9"  coveredstatements="9"  conditionals="4"  coveredconditionals="3"  methods="2"  coveredmethods="2" />
 				<line num="1"  count="1"  type="stmt" />
 				<line num="3"  count="1"  type="stmt" />
 				<line num="6"  count="1"  type="stmt" />
-				<line num="11"  count="1"  type="stmt" />
-				<line num="12"  count="1"  type="stmt" />
-				<line num="13"  count="3"  type="cond"  truecount="3"  falsecount="1" />
-				<line num="15"  count="1"  type="stmt" />
-				<line num="16"  count="1"  type="stmt" />
-				<line num="25"  count="1"  type="stmt" />
-				<line num="29"  count="1"  type="stmt" />
-				<line num="38"  count="1"  type="stmt" />
+				<line num="11"  count="1"  type="cond"  truecount="3"  falsecount="1" />
+				<line num="13"  count="1"  type="stmt" />
+				<line num="14"  count="1"  type="stmt" />
+				<line num="23"  count="1"  type="stmt" />
+				<line num="27"  count="1"  type="stmt" />
+				<line num="36"  count="1"  type="stmt" />
 			</file>
 		</package>
 		<package name="common.components.noConnectivity" >
@@ -273,53 +275,53 @@
 				<line num="26"  count="0"  type="stmt" />
 				<line num="36"  count="1"  type="cond"  truecount="0"  falsecount="4" />
 				<line num="37"  count="0"  type="stmt" />
-				<line num="43"  count="1"  type="cond"  truecount="0"  falsecount="4" />
-				<line num="44"  count="0"  type="stmt" />
+				<line num="44"  count="1"  type="cond"  truecount="0"  falsecount="4" />
 				<line num="45"  count="0"  type="stmt" />
-				<line num="47"  count="0"  type="cond"  truecount="0"  falsecount="2" />
-				<line num="49"  count="0"  type="stmt" />
+				<line num="46"  count="0"  type="stmt" />
+				<line num="48"  count="0"  type="cond"  truecount="0"  falsecount="2" />
 				<line num="50"  count="0"  type="stmt" />
-				<line num="52"  count="0"  type="stmt" />
+				<line num="51"  count="0"  type="stmt" />
 				<line num="53"  count="0"  type="stmt" />
 				<line num="54"  count="0"  type="stmt" />
-				<line num="56"  count="0"  type="stmt" />
-				<line num="59"  count="0"  type="stmt" />
-				<line num="60"  count="0"  type="cond"  truecount="0"  falsecount="2" />
-				<line num="67"  count="1"  type="cond"  truecount="0"  falsecount="4" />
-				<line num="68"  count="0"  type="stmt" />
-				<line num="69"  count="0"  type="cond"  truecount="0"  falsecount="2" />
+				<line num="55"  count="0"  type="stmt" />
+				<line num="57"  count="0"  type="stmt" />
+				<line num="60"  count="0"  type="stmt" />
+				<line num="61"  count="0"  type="cond"  truecount="0"  falsecount="2" />
+				<line num="68"  count="1"  type="cond"  truecount="0"  falsecount="4" />
+				<line num="69"  count="0"  type="stmt" />
 				<line num="70"  count="0"  type="cond"  truecount="0"  falsecount="2" />
-				<line num="71"  count="0"  type="stmt" />
-				<line num="73"  count="0"  type="cond"  truecount="0"  falsecount="2" />
-				<line num="80"  count="1"  type="stmt" />
-				<line num="81"  count="0"  type="stmt" />
-				<line num="83"  count="0"  type="cond"  truecount="0"  falsecount="4" />
-				<line num="84"  count="0"  type="stmt" />
-				<line num="87"  count="0"  type="cond"  truecount="0"  falsecount="2" />
+				<line num="71"  count="0"  type="cond"  truecount="0"  falsecount="2" />
+				<line num="72"  count="0"  type="stmt" />
+				<line num="74"  count="0"  type="cond"  truecount="0"  falsecount="2" />
+				<line num="81"  count="1"  type="stmt" />
+				<line num="82"  count="0"  type="stmt" />
+				<line num="84"  count="0"  type="cond"  truecount="0"  falsecount="4" />
+				<line num="85"  count="0"  type="stmt" />
 				<line num="88"  count="0"  type="cond"  truecount="0"  falsecount="2" />
-				<line num="89"  count="0"  type="stmt" />
-				<line num="91"  count="0"  type="stmt" />
-				<line num="96"  count="1"  type="stmt" />
-				<line num="97"  count="0"  type="stmt" />
-				<line num="99"  count="0"  type="cond"  truecount="0"  falsecount="2" />
-				<line num="105"  count="1"  type="stmt" />
-				<line num="106"  count="0"  type="stmt" />
-				<line num="109"  count="1"  type="stmt" />
-				<line num="110"  count="0"  type="stmt" />
-				<line num="112"  count="0"  type="cond"  truecount="0"  falsecount="2" />
-				<line num="116"  count="0"  type="stmt" />
-				<line num="119"  count="1"  type="cond"  truecount="0"  falsecount="4" />
-				<line num="120"  count="0"  type="stmt" />
-				<line num="123"  count="1"  type="cond"  truecount="0"  falsecount="4" />
-				<line num="124"  count="0"  type="stmt" />
-				<line num="127"  count="1"  type="stmt" />
-				<line num="128"  count="0"  type="stmt" />
+				<line num="89"  count="0"  type="cond"  truecount="0"  falsecount="2" />
+				<line num="90"  count="0"  type="stmt" />
+				<line num="92"  count="0"  type="stmt" />
+				<line num="97"  count="1"  type="stmt" />
+				<line num="98"  count="0"  type="stmt" />
+				<line num="100"  count="0"  type="cond"  truecount="0"  falsecount="2" />
+				<line num="106"  count="1"  type="stmt" />
+				<line num="107"  count="0"  type="stmt" />
+				<line num="110"  count="1"  type="stmt" />
+				<line num="111"  count="0"  type="stmt" />
+				<line num="113"  count="0"  type="cond"  truecount="0"  falsecount="2" />
+				<line num="117"  count="0"  type="stmt" />
+				<line num="120"  count="1"  type="cond"  truecount="0"  falsecount="4" />
+				<line num="121"  count="0"  type="stmt" />
+				<line num="124"  count="1"  type="cond"  truecount="0"  falsecount="4" />
+				<line num="125"  count="0"  type="stmt" />
+				<line num="128"  count="1"  type="stmt" />
+				<line num="129"  count="0"  type="stmt" />
 			</file>
 		</package>
 		<package name="common.services.utils" >
-			<metrics statements="44"  coveredstatements="40"  conditionals="19"  coveredconditionals="14"  methods="8"  coveredmethods="8" />
+			<metrics statements="49"  coveredstatements="41"  conditionals="25"  coveredconditionals="14"  methods="9"  coveredmethods="8" />
 			<file name="utils.js"  path="/Users/kentor/GitProjects/jsair/ReactNativeApp/common/services/utils/utils.js" >
-				<metrics statements="44"  coveredstatements="40"  conditionals="19"  coveredconditionals="14"  methods="8"  coveredmethods="8" />
+				<metrics statements="49"  coveredstatements="41"  conditionals="25"  coveredconditionals="14"  methods="9"  coveredmethods="8" />
 				<line num="1"  count="1"  type="stmt" />
 				<line num="3"  count="1"  type="cond"  truecount="3"  falsecount="1" />
 				<line num="5"  count="3"  type="cond"  truecount="3"  falsecount="1" />
@@ -364,6 +366,11 @@
 				<line num="69"  count="27"  type="cond"  truecount="2"  falsecount="0" />
 				<line num="70"  count="17"  type="stmt" />
 				<line num="74"  count="1"  type="stmt" />
+				<line num="78"  count="1"  type="cond"  truecount="0"  falsecount="4" />
+				<line num="79"  count="0"  type="stmt" />
+				<line num="80"  count="0"  type="cond"  truecount="0"  falsecount="2" />
+				<line num="81"  count="0"  type="stmt" />
+				<line num="83"  count="0"  type="stmt" />
 			</file>
 		</package>
 	</project>

@@ -14,17 +14,17 @@ import {
 }                       from '../../../common/config';
 import Icon             from 'react-native-vector-icons/Ionicons';
 
-const NoData = (props) => {
+const NoData = ({ ionIconName, noDataText }) => {
   return (
     <View style={styles.noDataContainer}>
       <Icon
         style={styles.noDataIcon}
-        name={props.ionIconName}
+        name={ionIconName}
         size={76}
         color={AppColors.darkGrey}
       />
       <Text style={styles.noDataText}>
-        {props.noDataText}
+        {noDataText}
       </Text>
     </View>
   );

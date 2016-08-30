@@ -33,9 +33,10 @@ const receivedEpisodeData = (allEpisodes, actionDate = moment().format('llll')) 
   };
 };
 
-const errorFetchingEpisodeData = (actionDate = moment().format('llll')) => {
+const errorFetchingEpisodeData = (error, actionDate = moment().format('llll')) => {
   return {
-    type: ERROR_FETCHING_EPISODES_DATA
+    type: ERROR_FETCHING_EPISODES_DATA,
+    error
   };
 };
 
@@ -56,7 +57,7 @@ export const fetchAllEpisodeData = (url = `${AppConfig.javascriptAirUrl}/${AppCo
         json => dispatch(receivedEpisodeData(json)))
       .catch(
         err => {
-          dispatch(errorFetchingEpisodeData()); // unset isFetching flag
+          dispatch(errorFetchingEpisodeData(err)); // unset isFetching flag
           AppConfig.DEBUG_ENABLED ?  console.log('fetch episodes data error: ', err) : null;
         }
       );

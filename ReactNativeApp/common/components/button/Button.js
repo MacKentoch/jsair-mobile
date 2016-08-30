@@ -3,14 +3,23 @@
 import React, {
   Component,
   PropTypes
-}                   from 'react';
+}                     from 'react';
+import shallowCompare from 'react-addons-shallow-compare';
 import {
   TouchableOpacity,
   View,
   Text
-}                   from 'react-native';
+}                     from 'react-native';
 
 class Button extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return shallowCompare(this, nextProps, nextState);
+  }
+
   render() {
     return (
       <View>
@@ -26,9 +35,9 @@ class Button extends Component {
   }
 
   handlePress = (event) => {
-    this.props.onPress(event);
+    const { onPress } = this.props;
+    onPress(event);
   }
-
 }
 
 

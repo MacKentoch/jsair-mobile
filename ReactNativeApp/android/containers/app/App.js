@@ -29,16 +29,14 @@ import HostAndPanelists         from '../hostAndPanelists/HostAndPanelists';
 import Sponsors                 from '../sponsors/Sponsors';
 
 
-const SCREEN_WIDTH = Dimensions.get('window').width;
-const DRAWER_WIDTH = SCREEN_WIDTH ? SCREEN_WIDTH * 0.8 : 300;
+const SCREEN_WIDTH  = Dimensions.get('window').width;
+const DRAWER_WIDTH  = SCREEN_WIDTH ? SCREEN_WIDTH * 0.8 : 300;
+const DEFAULT_ROUTE = { id: 1, refView: 'episodesView' };
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.init();
-  }
 
-  init() {
     this.state = {
       DrawerOpened: false,
       drawerWidth:  DRAWER_WIDTH
@@ -61,95 +59,54 @@ class App extends Component {
   }
 
   componentWillUnmount() {
-    NetInfo.isConnected.removeEventListener('change', () => this.handlesConnectivityChanged());
-  }
-
-  handlesConnectivityChanged(isConnected) {
-    this.props.actions.connectivityChange(isConnected);
-    AppConfig.DEBUG_ENABLED ? console.log('set connectivity to ', isConnected) : null;
-  }
-
-  displayConnectivityAlert() {
-    Alert.alert(
-      AppConfig.noConnectivityAlert.title,
-      AppConfig.noConnectivityAlert.description,
-      [
-        {
-          text: AppConfig.noConnectivityAlert.buttonText,
-          onPress: () => console.log('No connection button Pressed')
-        }
-      ]
+    NetInfo.isConnected.removeEventListener(
+      'change',
+      () => this.handlesConnectivityChanged()
     );
   }
 
-  handlesDrawerOpen() {
-    // dismissKeyboard(); // when needed
+  render() {
+    const { drawerWidth } = this.state;
+
+    return (
+      <DrawerLayoutAndroid
+        ref="drawer"
+        drawerWidth={drawerWidth}
+        drawerPosition={DrawerLayoutAndroid.positions.Left}
+        renderNavigationView={this.renderNavigationView}
+        openDrawer={this.handlesDrawerOpen}
+        onDrawerOpen={this.onDrawerOpenEvent}
+        closeDrawer={this.handlesDrawerClose}
+        onDrawerClose={this.onDrawerCloseEvent}>
+        <Navigator
+          ref="navigator"
+          initialRoute={ DEFAULT_ROUTE }
+          sceneStyle={ styles.navigator }
+          renderScene={this.renderScene}
+          configureScene={this.configureScene}
+          navigationBar={
+            <Navigator.NavigationBar
+              routeMapper={this.renderRouteMapper()}
+              style={styles.navBar}
+            />
+          }
+        />
+    </DrawerLayoutAndroid>
+    );
   }
 
-  onDrawerOpenEvent() {
-    this.setState({
-      DrawerOpened : true
-    });
+  renderNavigationView = () => {
+    return (
+      <DrawerContent
+        sideMenuTitle={AppConfig.sideMenuTitle}
+        openDrawer={this.openDrawer}
+        closeDrawer={this.closeDrawer}
+        navigate={this.navigate}
+      />
+    );
   }
 
-  handlesDrawerClose() {
-    // something specific to add here
-  }
-
-  onDrawerCloseEvent() {
-    this.setState({
-      DrawerOpened : false
-    });
-  }
-
-  openDrawer() {
-    if (this.state.DrawerOpened) {
-      this.refs.drawer.openDrawer();
-      this.setState({
-        DrawerOpened: true
-      });
-    }
-  }
-
-  closeDrawer() {
-    if (this.state.DrawerOpened) {
-      this.refs.drawer.closeDrawer();
-      this.setState({
-        DrawerOpened : false
-      });
-    }
-  }
-
-  toggleDrawer() {
-    if (this.state.DrawerOpened) {
-      this.refs.drawer.closeDrawer();
-    } else {
-      this.refs.drawer.openDrawer();
-    }
-    this.setState({
-      DrawerOpened: !this.state.DrawerOpened
-    });
-  }
-
-  updateDrawerState(isOpened) {
-    this.setState({
-      DrawerOpened: isOpened
-    });
-  }
-
-  navigate(route) {
-    const routeStack      = [].concat(this.refs.navigator.getCurrentRoutes());
-    const previousRouteId = routeStack[routeStack.length - 1].id;
-    if (route.id !== previousRouteId) {
-      this.refs.navigator.replace(route);
-    }
-
-    if (this.state.DrawerOpened) {
-      this.closeDrawer();
-    }
-  }
-
-  renderScene(route, navigator) {
+  renderScene = (route, navigator) => {
     switch (route.id) {
     case 1:
       const route1 = AppRoutes.getRouteFromRouteId(1);
@@ -157,7 +114,7 @@ class App extends Component {
         <Episodes
           ref={route1.refView}
           navigator={navigator}
-          navigate={(toRoute)=>this.navigate(toRoute)}
+          navigate={this.navigate}
         />
       );
     case 2:
@@ -166,7 +123,7 @@ class App extends Component {
         <HostAndPanelists
           ref={route2.refView}
           navigator={navigator}
-          navigate={(toRoute)=>this.navigate(toRoute)}
+          navigate={this.navigate}
         />
       );
       case 3:
@@ -175,7 +132,7 @@ class App extends Component {
           <Sponsors
             ref={route3.refView}
             navigator={navigator}
-            navigate={(toRoute)=>this.navigate(toRoute)}
+            navigate={this.navigate}
           />
         );
     default:
@@ -183,10 +140,14 @@ class App extends Component {
         <Episodes
           ref={route1.refView}
           navigator={navigator}
-          navigate={(toRoute)=>this.navigate(toRoute)}
+          navigate={this.navigate}
         />
       );
     }
+  }
+
+  configureScene = () => {
+    return Navigator.SceneConfigs.FadeAndroid;
   }
 
   renderRouteMapper() {
@@ -200,7 +161,7 @@ class App extends Component {
         return (
           <Button
             style={styles.leftNavButton}
-            onPress={(e)=>this.toggleDrawer(e)}>
+            onPress={this.toggleDrawer}>
             <Icon
               name={routes[currentRouteId - 1].navbar.navBarLeftIconName}
               size={42}
@@ -231,50 +192,95 @@ class App extends Component {
     };
   }
 
-  render() {
-    const DEFAULT_ROUTE = { id: 1, refView: 'episodesView' };
+  navigate = (route) => {
+    const routeStack      = [].concat(this.refs.navigator.getCurrentRoutes());
+    const previousRouteId = routeStack[routeStack.length - 1].id;
+    if (route.id !== previousRouteId) {
+      this.refs.navigator.replace(route);
+    }
 
-    // if (this.props.isConnected === false) {
-    //   this.displayConnectivityAlert();
-    // }
+    if (this.state.DrawerOpened) {
+      this.closeDrawer();
+    }
+  }
 
-    return (
-      <DrawerLayoutAndroid
-        ref="drawer"
-        drawerWidth={this.state.drawerWidth}
-        drawerPosition={DrawerLayoutAndroid.positions.Left}
-        renderNavigationView={
-          () => {
-            return (
-              <DrawerContent
-                sideMenuTitle={AppConfig.sideMenuTitle}
-                openDrawer={()=>this.openDrawer()}
-                closeDrawer={()=>this.closeDrawer()}
-                navigate={(route)=>this.navigate(route)}
-              />
-            );
-          }
+  handlesConnectivityChanged(isConnected) {
+    const { actions: { connectivityChange } } = this.props;
+    connectivityChange(isConnected);
+    AppConfig.DEBUG_ENABLED ? console.log('set connectivity to ', isConnected) : null;
+  }
+
+  displayConnectivityAlert() {
+    Alert.alert(
+      AppConfig.noConnectivityAlert.title,
+      AppConfig.noConnectivityAlert.description,
+      [
+        {
+          text: AppConfig.noConnectivityAlert.buttonText,
+          onPress: () => console.log('No connection button Pressed')
         }
-        openDrawer={()=>this.handlesDrawerOpen()}
-        onDrawerOpen={()=>this.onDrawerOpenEvent()}
-        closeDrawer={()=>this.handlesDrawerClose()}
-        onDrawerClose={()=>this.onDrawerCloseEvent()}>
-        <Navigator
-          ref="navigator"
-          initialRoute={ DEFAULT_ROUTE }
-          sceneStyle={ styles.navigator }
-          renderScene={(route, navigator)=>this.renderScene(route, navigator)}
-          configureScene={()=>Navigator.SceneConfigs.FadeAndroid}
-          navigationBar={
-            <Navigator.NavigationBar
-              routeMapper={this.renderRouteMapper()}
-              style={styles.navBar}
-            />
-          }
-        />
-    </DrawerLayoutAndroid>
+      ]
     );
   }
+
+  handlesDrawerOpen = () => {
+    // dismissKeyboard(); // when needed
+  }
+
+  onDrawerOpenEvent = () => {
+    this.setState({
+      DrawerOpened : true
+    });
+  }
+
+  handlesDrawerClose = () => {
+    // something specific to add here
+  }
+
+  onDrawerCloseEvent = () => {
+    this.setState({
+      DrawerOpened : false
+    });
+  }
+
+  openDrawer = () => {
+    const { DrawerOpened } = this.state;
+    if (DrawerOpened) {
+      this.refs.drawer.openDrawer();
+      this.setState({
+        DrawerOpened: true
+      });
+    }
+  }
+
+  closeDrawer = () => {
+    const { DrawerOpened } = this.state;
+    if (DrawerOpened) {
+      this.refs.drawer.closeDrawer();
+      this.setState({
+        DrawerOpened : false
+      });
+    }
+  }
+
+  toggleDrawer = () => {
+    const { DrawerOpened } = this.state;
+    if (DrawerOpened) {
+      this.refs.drawer.closeDrawer();
+    } else {
+      this.refs.drawer.openDrawer();
+    }
+    this.setState({
+      DrawerOpened: !DrawerOpened
+    });
+  }
+
+  updateDrawerState(isOpened) {
+    this.setState({
+      DrawerOpened: isOpened
+    });
+  }
+
 }
 
 const styles = StyleSheet.create({

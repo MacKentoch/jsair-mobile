@@ -25,41 +25,41 @@ import * as Animatable  from 'react-native-animatable';
 class Panelists extends Component {
   constructor(props) {
     super(props);
-    this.init();
-  }
 
-  init() {
     this.state = {
       isReady: false
     };
   }
 
   componentDidMount() {
-    InteractionManager.runAfterInteractions(() => this.setState({isReady: true}));
+    InteractionManager.runAfterInteractions(
+      () => this.setState({isReady: true})
+    );
   }
 
   render() {
-    const props = this.props;
+    const { isConnected, hasDataInStore, contentLoading, panelists } = this.props;
+    const { isReady } = this.state;
 
-    if (!props.isConnected && !props.hasDataInStore) {
+    if (!isConnected && !hasDataInStore) {
       return (
         <NoConnectivity />
       );
     }
 
-    if (props.contentLoading) {
+    if (contentLoading) {
       return (
         <Loading />
       );
     }
 
-    if (!this.state.isReady) {
+    if (!isReady) {
       return (
         null
       );
     }
 
-    if (!props.hasDataInStore) {
+    if (!hasDataInStore) {
       return (
         <NoData
           noDataText={AppConfig.noPanelistsDataText}
@@ -75,16 +75,16 @@ class Panelists extends Component {
         <ScrollView style={styles.container}>
           <View style={styles.panelistsList}>
             {
-              props.panelists.map(
-                (panelist, panelistIndex) => {
+              panelists.map(
+                ({ imgSrc, name, twitter, link }, panelistIndex) => {
                   return (
                     <Member
                       key={panelistIndex}
                       style={styles.panelists}
-                      photo={{uri: panelist.imgSrc ? AppConfig.javascriptAirUrl + panelist.imgSrc : ''}}
-                      name={panelist.name}
-                      twitter={panelist.twitter}
-                      link={panelist.link}
+                      photo={{uri: imgSrc ? AppConfig.javascriptAirUrl + imgSrc : ''}}
+                      name={name}
+                      twitter={twitter}
+                      link={link}
                     />
                   );
                 }

@@ -11,7 +11,7 @@ const routes = [{
   },
   navbar: {
     navBarTitle         : 'Episodes',
-    navBarLeftIconName  : 'navicon',
+    navBarLeftIconName  : 'ios-menu',
     navBarLeftIconSize  : 32
   }
 },
@@ -26,7 +26,7 @@ const routes = [{
   },
   navbar: {
     navBarTitle         : 'Host & Panelists',
-    navBarLeftIconName  : 'navicon',
+    navBarLeftIconName  : 'ios-menu',
     navBarLeftIconSize  : 32
   }
 },
@@ -36,12 +36,12 @@ const routes = [{
   sidemenu: {
     sideMenuButtonText  : 'Sponsors',
     iconType            : 'ionicons',
-    iconName            : 'ribbon-b',
+    iconName            : 'ios-ribbon',
     iconSize            : 22,
   },
   navbar: {
     navBarTitle         : 'Sponsors',
-    navBarLeftIconName  : 'navicon',
+    navBarLeftIconName  : 'ios-menu',
     navBarLeftIconSize  : 32
   }
 }
@@ -64,6 +64,6 @@ class AppRoutesClass {
 }
 
 
-let AppRoutes = new AppRoutesClass();
+const AppRoutes = new AppRoutesClass();
 
 export default AppRoutes;
