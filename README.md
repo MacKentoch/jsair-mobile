@@ -17,6 +17,11 @@ This is not a standard hybrid application but a more powerfull hybrid applicatio
 Javascript air website is a super nice website and is open source ([feel free to contribute](https://github.com/javascriptair/site)).
 But to my mind having a mobile app is as natural as having a website.
 
+
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/Mp96tCWH2KdajZuBzqB6jwj8/MacKentoch/jsair-mobile'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/Mp96tCWH2KdajZuBzqB6jwj8/MacKentoch/jsair-mobile.svg' />
+</a>
+
 ### setup and launch
 
 Just follow [official website instructions](https://facebook.github.io/react-native/docs/getting-started.html) (*it is well documented*).
